@@ -1,0 +1,30 @@
+<% provide(:title, @title) %>
+<%= render 'layouts/header' %>
+<div class="main">
+	<div class="col-md-8">
+		<div class="show_follow_profile">
+			<div class="show_follow_profile_gravatar">
+				<%= link_to gravatar_for(@user, size: 50), @user %>
+			</div>
+			<div class="show_follow_profile_name">
+				<p><%= link_to @user.name, @user %></p>
+				<p><%= @following%></p>
+				<p class= "show_follow_profile_name_followers"><%= @followers%></p>
+			</div>
+		</div>
+		<div class="follow-title">
+			<h3 class="following-title"><a href="<%= following_user_path(@user) %>">
+					<strong id="following" class="stat">フォロー</strong>
+				</a></h3>
+			<h3 class="follower-title"><a href="<%= followers_user_path(@user) %>">
+					<strong id="followers" class="stat">フォロワー</strong>
+				</a></h3>
+		</div>
+		<% if @users.any? %>
+			<ul class="users following followers">
+				<%= render @users %>
+			</ul>
+			<%= will_paginate %>
+		<% end %>
+	</div>
+</div>

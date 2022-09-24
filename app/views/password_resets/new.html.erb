@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charaset="UTF-8">
+  <meta bane="viewport" content="width=device-width, initial-scale=1">
+    <title><%= full_title(yield(:title)) %></title>
+    <meta name="description" content="公務員を辞めたい人、もしくは公務員を辞めた人が集まるSNSです。">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <!--[if lt IE 9]>
+      <script src="//cdnjs.cloudflare.com/ajax/libs/html5shiv/r29/html5.min.js">
+      </script>
+    <![endif]-->
+</head>
+<body>
+  <section class="password-reset">
+    <div class="alert alert-danger">
+       <% flash.each do |message_type, message| %>
+         <div class="alert alert-<%= message_type %>"><%= message %></div>
+       <% end %>
+    </div>
+    <h1 class="section-title">パスワードリセット</h1>
+      <div class="container row">    
+         <div class="login_form col-md-6 col-md-offset-3">
+           <%= form_with(url: password_resets_path, scope: :password_reset, local: true) do |f| %>
+             <div class="text"><%= f.email_field :email, placeholder: "メールアドレス", class: 'form-control' %></div>
+             <div><%= f.submit "パスワードをリセット", class: "btn_create" %></div>
+             <div class="signup_message">アカウントをお持ちでない方は<%= link_to "こちら", signup_path %></div>
+            <% end %>
+         </div>
+      </div>
+  </section>
+  
+</body>
+</html>

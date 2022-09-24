@@ -1,0 +1,27 @@
+<%= render 'layouts/header' %>
+<div class="main">
+	<section class="edit">
+		<h1 class="section-title">プロフィールを編集</h1>
+		<div class="container row">
+			
+			<div class="gravatar_edit">
+				<%= gravatar_for @user %>
+				<a href="https://gravatar.com/emails" target="_blank">プロフィール画像を変更</a>
+			</div>
+			<div class="edit_form col-md-6 col-md-offset-3">
+				<%= form_with(model: @user, local: true) do |f| %>
+				<%= render 'shared/error_messages', object: f.object %>
+					<% f.label :name %>
+					<div class="text"><%= f.text_field :name, placeholder: "ユーザー名",  class: 'form-control text'%></div>
+					<div class="text"><%= f.email_field :email, placeholder: "メールアドレス", class: 'form-control text' %></div>
+					<%= f.text_area :introduction, placeholder: "自己紹介", class: 'form-control text', rows: "3" %>
+					<div class="text"><%= f.password_field :password, placeholder: "パスワード", class: 'form-control text'%></div>
+					<div class="text"><%= f.password_field :password_confirmation, placeholder: "確認用パスワード", class: 'form-control text' %></div>
+					<div class="btn_create"><%= f.submit "更新する", class: "btn_create" %></div>
+					<%= link_to "アカウントを削除する", user_path(@user), method: :delete,
+                                data: { confirm: "本当にこのアカウントを削除してよろしいですか？" } %>
+				<% end %>
+			</div>
+		</div>
+	</section>
+</div>

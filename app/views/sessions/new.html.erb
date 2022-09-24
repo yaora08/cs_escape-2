@@ -1,0 +1,23 @@
+  <section class="login">
+    <div class="alert alert-danger">
+       <% flash.each do |message_type, message| %>
+         <div class="alert alert-<%= message_type %>"><%= message %></div>
+       <% end %>
+    </div>
+    <h1 class="section-title">ログイン</h1>
+      <div class="container row">    
+         <div class="login_form col-md-6 col-md-offset-3">
+           <%= form_with(url: login_path, scope: :session, local: true) do |f| %>
+             <div class="text"><%= f.email_field :email, placeholder: "メールアドレス", class: 'form-control' %></div>
+             <div class="text"><%= f.password_field :password, placeholder: "パスワード", class: 'form-control'%></div>
+             <%= f.label :remember_me, class: "checkbox inline" do %>
+               <%= f.check_box :remember_me %>
+               <span>ログイン状態を保持する</span>
+             <% end %>
+             <div><%= f.submit "ログイン", class: "btn_create" %></div>
+             <div class="signup_message">アカウントをお持ちでない方は<%= link_to "こちら", signup_path %></div>
+             <div class="password_reset">パスワードをお忘れの方は<%= link_to "こちら", new_password_reset_path %></div>
+            <% end %>
+         </div>
+      </div>
+  </section>

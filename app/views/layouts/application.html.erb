@@ -1,0 +1,26 @@
+<% provide(:title, "NEXT公務員") %>
+<!DOCTYPE html>
+<html lang="ja">
+	<head>
+		<meta charaset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title><%= (yield(:title)) %></title>
+		<meta name="description" content="公務員を辞めたい人、もしくは公務員を辞めた人が集まるSNSです。">
+		<%= csrf_meta_tags %>
+		<%= csp_meta_tag %>
+		<%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+		<%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+		<%= render 'layouts/shim' %>
+	</head>
+	<body>
+  <div class="modal-contact">
+    <div class="modal-header"></div>
+    <div class="modal-content"></div>
+    <div class="modal-footer"></div>
+    <div class="modal-button"></div>
+  </div>
+		<%= yield %>
+	</div>
+</div>
+</body>
+</html>

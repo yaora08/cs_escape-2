@@ -1,0 +1,6 @@
+<%= form_with(model: current_user.active_relationships.find_by(followed_id: @user.id),
+            html: { method: :delete }, local: false) do |f| %>
+  <%= f.submit "フォローをやめる", class: "btn btn-default" %>
+<% end %>
+
+<%# destroyアクションが反応するためのフォーム %>

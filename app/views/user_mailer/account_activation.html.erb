@@ -1,0 +1,10 @@
+<h1>NEXT公務員</h1>
+
+<p><%= @user.name %>さん</p>
+
+<p>
+NEXT公務員へようこそ！ リンクをクリックして認証を完了させてください。
+</p>
+
+<%= link_to "Activate", edit_account_activation_url(@user.activation_token,
+                                                    email: @user.email) %>

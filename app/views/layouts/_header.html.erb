@@ -1,0 +1,26 @@
+<header class="navbar">
+	<div class="container">
+		<div class="header_nav">
+			<%= link_to "NEXT公務員", '#', id: "logo", class: "header-title" %>
+			<nav>
+				<ul class="nav navbar-nav navbar-right">
+					<li><%= link_to "投稿する", new_micropost_path, class: "post" %></li>
+					<li><%= link_to "ユーザー一覧", users_path %></li>
+					<li><%= link_to "ログアウト", logout_path, method: :delete %></li>
+				</ul>
+			</nav>
+		</div>
+	</div>
+</header>
+<div class="container">
+	<div class="main-topic">
+		<div class="side">
+			<nav class="sidebar">
+				<ul claÏss="sidebar-items">
+					<li><%= link_to "ホーム",root_path, class: "side-list"  '#' %></li>
+					<li><%= link_to "チャット", class: "side-list"  '#' %></li>
+					<li><%= link_to "プロフィール", class: "side-list"  '#' %></li>
+					<li><%= link_to "新規投稿", new_micropost_path, class: "side-list" %></li>
+				</ul>
+			</nav>
+		</div>

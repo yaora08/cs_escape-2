@@ -1,0 +1,29 @@
+<% provide(:title, "NEXT公務員") %>
+<%= render 'layouts/header' %>
+<div class="main">
+	<div class="alert alert-success">
+		<% flash.each do |message_type, message| %>
+			<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+	</div>
+	<section class="micropost_show">
+		<div class="container">
+			<div class="micropost_show_user_profiel">
+				<div class="micropost_show_user_gravatar"><%= link_to gravatar_for(@micropost.user, size: 50), controller: 'users', action: 'show', id: @micropost.user.id %></div>
+				<h2 class="micropost_show_user_name"><%= @micropost.user.name %></h2>
+			</div>
+			<div class="micropost_show_user_content">
+				<div class="micropost_content"><%= @micropost.content %></div>
+				<span class="picture">
+					<%= link_to((image_tag @micropost.picture.thumb400.url), micropost_path(@micropost.id), class: 'micropost-picture') if @micropost.picture.url.present? %>
+				</span>
+			</div>
+			<div class="micropost_show_delete">
+				<% if current_user.admin? || (current_user == @micropost.user) %>
+					<%= link_to "削除", micropost_path(@micropost), method: :delete, class: 'delete-micropost',
+                                      data: { confirm: "本当に削除しますか？" } %>
+				<% end %>
+			</div>
+		</div>
+	</section>
+</div>

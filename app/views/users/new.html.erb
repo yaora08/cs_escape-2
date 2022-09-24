@@ -1,0 +1,18 @@
+	<section class="signup">
+		<h1 class="section-title">新規登録</h1>
+		<div class="container row">
+			<div class="signup_form col-md-6 col-md-offset-3">
+				<%= form_with(model: @user, local: true) do |f| %>
+					<%= render 'shared/error_messages', object: f.object %>
+					<% f.label :name %>
+					<div class="text"><%= f.text_field :name, placeholder: "ユーザー名",  class: 'form-control'%></div>
+					<div class="text"><%= f.email_field :email, placeholder: "メールアドレス", class: 'form-control' %></div>
+					<div class="text"><%= f.password_field :password, placeholder: "パスワード", class: 'form-control'%></div>
+					<div class="text"><%= f.password_field :password_confirmation, placeholder: "確認用パスワード", class: 'form-control' %></div>
+					<div class="button"><%= f.submit "アカウント作成", class: "btn_create" %></div>
+					<div class="login_message">アカウントをお持ちの方は<%= link_to "こちら", login_path %></div>
+				<% end %>
+			</div>
+		</div>
+	</section>
+
