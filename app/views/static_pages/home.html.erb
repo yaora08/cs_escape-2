@@ -10,9 +10,10 @@
 			<div class="container">
 				<div class="row">
 					<div class="col-md-9">
-						<h3>投稿一覧</h3>
+						<div class="show-micropost">
 						<span><%= pluralize(current_user.microposts.count, "件の投稿") %></span>
 						<%= render 'shared/feed' %>
+						</div>
 					</div>
 				</div>
 			</div>

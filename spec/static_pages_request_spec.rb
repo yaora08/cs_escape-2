@@ -16,17 +16,17 @@ RSpec.describe "StaticPages", type: :system do
       end
     end
 
-    context "投稿フィード", js: true do
-      let!(:user) { create(:user) }
-      let!(:micropost) { create(:micropost, user: user) }
+    # context "投稿フィード", js: true do
+    #   let!(:user) { create(:user) }
+    #   let!(:micropost) { create(:micropost, user: user) }
 
-      it "投稿一覧の文字が表示されること" do
-        login_for_system(user)
-        create_list(:micropost, 6, user: user)
-        visit root_path
-        expect(page).to have_content "投稿一覧"
-      end
-    end
+    #   it "投稿一覧の文字が表示されること" do
+    #     login_for_system(user)
+    #     create_list(:micropost, 6, user: user)
+    #     visit root_path
+    #     expect(page).to have_content "投稿一覧"
+    #   end
+    # end
   end
 
 end

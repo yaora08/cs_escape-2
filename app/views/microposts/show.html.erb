@@ -18,11 +18,14 @@
 					<%= link_to((image_tag @micropost.picture.thumb400.url), micropost_path(@micropost.id), class: 'micropost-picture') if @micropost.picture.url.present? %>
 				</span>
 			</div>
-			<div class="micropost_show_delete">
-				<% if current_user.admin? || (current_user == @micropost.user) %>
-					<%= link_to "削除", micropost_path(@micropost), method: :delete, class: 'delete-micropost',
+			<div class="micropost_show_footer">
+				<%= render 'users/favorite_form' %>
+				<div class="micropost_show_delete">
+					<% if current_user.admin? || (current_user == @micropost.user) %>
+						<%= link_to "削除", micropost_path(@micropost), method: :delete, class: 'delete-micropost',
                                       data: { confirm: "本当に削除しますか？" } %>
-				<% end %>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</section>
