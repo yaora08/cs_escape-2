@@ -20,6 +20,9 @@ class User < ApplicationRecord
     validates :introduction, length: { maximum: 255 }
     has_secure_password
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
+    has_many :followers, through: :passive_relationships, source: :follower
+    has_many :favorites, dependent: :destroy
+    
 
 
   class << self
@@ -111,6 +114,18 @@ class User < ApplicationRecord
   # 現在のユーザーがフォローされていたらtrueを返す
   def followed_by?(other_user)
     followers.include?(other_user)
+  end
+
+  def favorite(micropost)
+    Favorite.create!(user_id: id, micropost_id: micropost.id)
+  end
+
+  def unfavorite(micropost)
+    Favorite.find_by(user_id: id, micropost_id: micropost.id).destroy
+  end
+
+  def favorite?(micropost)
+    !Favorite.find_by(user_id: id, micropost_id: micropost.id).nil?
   end
 
 

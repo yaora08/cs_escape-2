@@ -9,6 +9,14 @@ class UsersController < ApplicationController
   def show
     @user = User.find(params[:id])
     @microposts = @user.microposts.paginate(page: params[:page])
+    render 'users/show'
+  end
+
+  def favorites
+    @user = User.find(params[:id])
+    @microposts = @user.favorites.paginate(page: params[:page])
+    @favorites = current_user.favorites
+    render 'users/show'
   end
 
   def create

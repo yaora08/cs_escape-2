@@ -6,11 +6,14 @@ Rails.application.routes.draw do
   get    '/about',   to: 'static_pages#about'
   get    '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
+  # get    :favorites, to: 'favorites#index'
   post   '/login',   to: 'sessions#create'
   delete '/logout',  to: 'sessions#destroy'
+  post   "favorites/:micropost_id/create"  => "favorites#create"
+  delete "favorites/:micropost_id/destroy" => "favorites#destroy"
   resources :users do
     member do
-      get :following, :followers
+      get :following, :followers, :favorites
     end
   end
   resources :account_activations, only: [:edit]

@@ -752,6 +752,31 @@ form {
   margin-left: 80px;
 }
 
+.micropost_show_footer {
+  display: flex;
+}
+
+#favorite-300 {
+  a {
+    margin-left: auto;
+  }
+}
+
+.micropost_show_delete {
+  margin-left: auto;
+}
+
+// お気に入り
+.like-btn-unlike {
+  color: red;
+  margin-left: 630px;
+}
+.like-btn-like {
+  color: grey;
+  margin-left: 630px;
+}
+
+
 /* -----------error_message------ */
 #error_explanation {
 
@@ -890,7 +915,7 @@ form {
   .timestamp {
     color: #d3d3d7;
     display: block;
-    margin-left: 60px;
+    margin-left: 15px;
     text-align: right;
   }
   .gravatar {
@@ -916,6 +941,20 @@ span.image {
   }
 }
 
+._micropost_html_footer {
+  display: flex;
+   // お気に入り
+    .like-btn-unlike {
+      color: red;
+      margin-left: 610px;
+      z-index: 3;
+    }
+    .like-btn-like {
+      color: grey;
+      margin-left: 610px;
+      z-index: 3;
+    }
+}
 
 /*----------modal-----------*/
 .modal-contact {
@@ -947,15 +986,7 @@ span.image {
      
     }
   
-    a::before {
-      content: "";
-      position: absolute;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      z-index: 1;
-    }
+    
   }
 
   img {

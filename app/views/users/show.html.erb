@@ -21,7 +21,7 @@
 				<% end %>
 			</div>
 			<div class="detail-introduction">
-			    <%= @user.introduction %>
+				<%= @user.introduction %>
 			</div>
 			<div class="stats">
 				<%= render 'shared/stats' %>
@@ -30,12 +30,15 @@
 	</div>
 	<div class="show-micropost row">
 		<div class="col-md-9">
-			<% if @user.microposts.any? %>
-				<h4><%= @user.microposts.count %>件の投稿</h4>
-				<ol class="microposts">
-					<%= render @microposts %>
-				</ol>
-				<%= will_paginate @microposts %>
-			<% end %>
-		</div>
+			<div class="show-micropost-button">
+				<div><%= link_to '自分の投稿', user_path, local: false %></div>
+				<div><%= link_to 'いいねした投稿', favorites_user_path, local: false %></div>
+			</div>
+				<% if @user.microposts.any? %>
+					<ol class="microposts">
+						<%= render @microposts %>
+					</ol>
+					<%= will_paginate @microposts %>
+				<% end %>
+			</div>
 	</div>
