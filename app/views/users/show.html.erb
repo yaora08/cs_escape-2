@@ -31,8 +31,8 @@
 	<div class="show-micropost row">
 		<div class="col-md-9">
 			<div class="show-micropost-button">
-				<div><%= link_to '自分の投稿', user_path, local: false %></div>
-				<div><%= link_to 'いいねした投稿', favorites_user_path, local: false %></div>
+				<div class="show-micropost-button-user"><%= link_to '自分の投稿', user_path, local: false %></div>
+				<div class="show-micropost-button-favorite"><%= link_to 'いいねした投稿', favorites_user_path, local: false %></div>
 			</div>
 				<% if @user.microposts.any? %>
 					<ol class="microposts">

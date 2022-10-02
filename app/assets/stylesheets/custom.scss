@@ -756,6 +756,26 @@ form {
   display: flex;
 }
 
+.show-micropost-button {
+  display: flex;
+}
+
+.show-micropost-button-user,
+.show-micropost-button-favorite {
+  width: 475px;
+  text-align: center;
+  height: 50px;
+  line-height: 50px;
+  :hover {
+    background-color: #c8c8cb;
+  }
+  a {
+    display: block;
+    text-decoration: none;
+    color: #000;
+  }
+}
+
 #favorite-300 {
   a {
     margin-left: auto;

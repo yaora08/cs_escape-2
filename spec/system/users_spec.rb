@@ -5,6 +5,7 @@ RSpec.describe "Users", type: :system do
   let!(:admin_user) { create(:user, :admin) }
   let!(:other_user) { create(:user) }
   let!(:micropost) { create(:micropost, user: user) }
+  let!(:other_micropost) { create(:micropost, user: other_user)}
 
   describe "ユーザー一覧ページ" do
     context "管理者ユーザーの場合" do
@@ -197,6 +198,22 @@ RSpec.describe "Users", type: :system do
 
       it "投稿のページネーションが表示されていることを確認" do
         expect(page).to have_css "div.pagination"
+      end
+
+      it "いいね一覧ページが期待通り表示されていること" do
+        visit favorites_user_path(user)
+        expect(page).not_to have_css "span.user"
+        user.favorite(micropost)
+        user.favorite(other_micropost)
+        visit favorites_user_path(user)
+        expect(page).to have_css "span.user", count: 2
+        expect(page).to have_content micropost.content
+        expect(page).to have_link user.name, href: user_path(user)
+        expect(page).to have_content other_micropost.content
+        expect(page).to have_link other_user.name, href: user_path(other_user)
+        user.unfavorite(other_micropost)
+        visit favorites_user_path(user)
+        expect(page).to have_css "span.user", count: 1
       end
     end
 
