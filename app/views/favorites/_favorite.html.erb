@@ -2,20 +2,21 @@
 <% user = @micropost.user %>
 <li id="favorite-<%= favorite.id %>">
 	<%= link_to gravatar_for(favorite.micropost.user, size: 50), favorite.micropost.user %>
-  <span class="user"><%= link_to favorite.micropost.user.name, favorite.micropost.user %></span>
-  <span class="content">
+	<span class="user"><%= link_to favorite.micropost.user.name, favorite.micropost.user %></span>
+	<span class="content">
 		<%= link_to favorite.micropost.content, micropost_path(favorite.micropost.id) %>
-    <span>
+		<span>
 			<%= link_to((image_tag micropost.picture.thumb400.url), micropost_path(favorite.micropost.id), class: 'micropost-picture') if favorite.micropost.picture.url.present? %>
 		</span>
 	</span>
-  <div class="_micropost_html_footer">
+	<span class="timestamp">
+		<div><%= time_ago_in_words(favorite.micropost.created_at) %>前に投稿</div>
+	</span>
+	<div class="_micropost_html_footer">
+		<%= link_to image_tag('comment.png'), new_micropost_comment_path(@micropost), class: 'micropost-comment' %>
 		<div class="_micropost_html_favorite">
 			<% @micropost = favorite.micropost %>
 			<div><%= render 'users/favorite_form' %></div>
 		</div>
-		<span class="timestamp">
-			<div><%= time_ago_in_words(favorite.micropost.created_at) %> 前に投稿</div>
-		</span>
 	</div>
 </li>

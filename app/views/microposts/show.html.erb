@@ -10,16 +10,7 @@
 		<div class="container">
 			<div class="micropost_show_user_profiel">
 				<div class="micropost_show_user_gravatar"><%= link_to gravatar_for(@micropost.user, size: 50), controller: 'users', action: 'show', id: @micropost.user.id %></div>
-				<h2 class="micropost_show_user_name"><%= @micropost.user.name %></h2>
-			</div>
-			<div class="micropost_show_user_content">
-				<div class="micropost_content"><%= @micropost.content %></div>
-				<span class="picture">
-					<%= link_to((image_tag @micropost.picture.thumb400.url), micropost_path(@micropost.id), class: 'micropost-picture') if @micropost.picture.url.present? %>
-				</span>
-			</div>
-			<div class="micropost_show_footer">
-				<%= render 'users/favorite_form' %>
+				<span class="micropost_show_user_name"><%= @micropost.user.name %></span>
 				<div class="micropost_show_delete">
 					<% if current_user.admin? || (current_user == @micropost.user) %>
 						<%= link_to "削除", micropost_path(@micropost), method: :delete, class: 'delete-micropost',
@@ -27,6 +18,22 @@
 					<% end %>
 				</div>
 			</div>
+			<div class="micropost_show_user_content">
+				<div class="micropost_content"><%= @micropost.content %></div>
+				<span class="picture">
+					<%= link_to((image_tag @micropost.picture.thumb400.url), micropost_path(@micropost.id), class: 'micropost-picture') if @micropost.picture.url.present? %>
+				</span>
+			</div>
+			<span class="timestamp">
+				<div><%= time_ago_in_words(@micropost.created_at) %>前に投稿</div>
+			</span>
+			<div class="_micropost_html_footer">
+				<%= link_to image_tag('comment.png'), new_micropost_comment_path(@micropost), class: 'micropost-comment' %>
+				<%= render 'users/favorite_form' %>
+			</div>
 		</div>
-	</section>
+	
+</section>
+<%# コメント一覧のパーシャル %>
+	<%= render 'comments/comments', micropost: @micropost %>
 </div>
