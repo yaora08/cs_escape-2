@@ -7,13 +7,14 @@
 			<%= link_to((image_tag micropost.picture.thumb400.url), micropost_path(micropost.id), class: 'micropost-picture') if micropost.picture.url.present? %>
 		</span>
 	</span>
+	<span class="timestamp">
+		<div><%= time_ago_in_words(micropost.created_at) %>前に投稿</div>
+	</span>
 	<div class="_micropost_html_footer">
+		<%= link_to image_tag('comment.png'), new_micropost_comment_path(micropost), class: 'micropost-comment' %>
 		<div class="_micropost_html_favorite">
 			<% @micropost = micropost %>
 			<div><%= render 'users/favorite_form' %></div>
 		</div>
-		<span class="timestamp">
-			<div><%= time_ago_in_words(micropost.created_at) %> 前に投稿</div>
-		</span>
 	</div>
 </li>

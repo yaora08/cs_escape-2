@@ -789,11 +789,11 @@ form {
 // お気に入り
 .like-btn-unlike {
   color: red;
-  margin-left: 630px;
+  margin-left: 60px;
 }
 .like-btn-like {
   color: grey;
-  margin-left: 630px;
+  margin-left: 60px;
 }
 
 
@@ -963,15 +963,16 @@ span.image {
 
 ._micropost_html_footer {
   display: flex;
+  margin-left: 100px;
    // お気に入り
     .like-btn-unlike {
       color: red;
-      margin-left: 610px;
+      margin-left: 60px;
       z-index: 3;
     }
     .like-btn-like {
       color: grey;
-      margin-left: 610px;
+      margin-left: 60px;
       z-index: 3;
     }
 }
@@ -1018,6 +1019,8 @@ span.image {
 
 
 
+
+
 /*----------microposts/new-----------*/
 
 .micropost_new {
@@ -1054,13 +1057,20 @@ span.image {
 .micropost_show {
   width: 750px;
   padding: 15px 10px 30px 10px;
-  margin: 20px auto;
+  margin: 20px 0 0 80px;
   border-top: 1px solid #d3d3d7;
   border-bottom: 1px solid #d3d3d7;
   .gravatar {
     width: 60px;
     height: 60px;
     margin-left: 0;
+  }
+
+  .timestamp {
+    color: #d3d3d7;
+    display: block;
+    margin-left: auto;
+    text-align: right;
   }
 }
 
@@ -1084,6 +1094,11 @@ span.image {
     a {
       color: #76a0a8;
     }
+}
+
+.micropost_content {
+  margin-left: 8px;
+  margin-top: -30px;
 }
 
 /*---show_follow.html-----*/
@@ -1151,6 +1166,40 @@ span.image {
   margin-top: -30px;
 }
 
+.micropost-comment {
+
+  .micropost_show {
+    margin-top: 0;
+    border-top: none;
+  }
+  img {
+    width: 20px;
+    height: 20px;
+  }
+}
+
+
+/*---comment---*/
+
+.comment-new {
+
+  form {
+    margin-top: 60px;
+  }
+}
+
+.form-group {
+    .form-control {
+      width: 400px;
+      height: 200px;
+    }
+}
+
+.micropost_show_comment {
+  .micropost_content {
+    margin-left: 70px;
+  }
+}
 
 /*----------------------
 　タブレット用css
