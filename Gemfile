@@ -30,6 +30,7 @@ gem 'carrierwave',             '1.2.2'
 
 group :production do
  gem 'fog', '1.42' 
+ gem 'pg', '1.1.4'
 end
 
 
