@@ -1,154 +1,308 @@
-example_id                                                   | status  | run_time        |
------------------------------------------------------------- | ------- | --------------- |
-./spec/hello_spec.rb[1:1]                                    | passed  | 0.00022 seconds |
-./spec/mailers/user_mailer_spec.rb[1:1:1]                    | passed  | 0.00996 seconds |
-./spec/mailers/user_mailer_spec.rb[1:1:2]                    | passed  | 0.0098 seconds  |
-./spec/mailers/user_mailer_spec.rb[1:1:3]                    | passed  | 0.00904 seconds |
-./spec/mailers/user_mailer_spec.rb[1:1:4]                    | passed  | 0.00871 seconds |
-./spec/mailers/user_mailer_spec.rb[1:1:5]                    | passed  | 0.01038 seconds |
-./spec/mailers/user_mailer_spec.rb[1:1:6]                    | passed  | 0.00884 seconds |
-./spec/models/comment_spec.rb[1:1]                           | pending | 0.00001 seconds |
-./spec/models/favorite_spec.rb[1:1]                          | passed  | 0.01299 seconds |
-./spec/models/favorite_spec.rb[1:2]                          | passed  | 0.01464 seconds |
-./spec/models/favorite_spec.rb[1:3]                          | passed  | 0.01364 seconds |
-./spec/models/micropost_spec.rb[1:1:1]                       | passed  | 0.02569 seconds |
-./spec/models/micropost_spec.rb[1:1:2]                       | passed  | 0.03184 seconds |
-./spec/models/micropost_spec.rb[1:1:3]                       | passed  | 0.03235 seconds |
-./spec/models/micropost_spec.rb[1:1:4]                       | passed  | 0.02722 seconds |
-./spec/models/micropost_spec.rb[1:2:1]                       | passed  | 0.02632 seconds |
-./spec/models/relationship_spec.rb[1:1]                      | passed  | 0.0126 seconds  |
-./spec/models/relationship_spec.rb[1:2]                      | passed  | 0.01887 seconds |
-./spec/models/relationship_spec.rb[1:3]                      | passed  | 0.01349 seconds |
-./spec/models/user_spec.rb[1:1:1]                            | passed  | 0.01266 seconds |
-./spec/models/user_spec.rb[1:1:2]                            | passed  | 0.01053 seconds |
-./spec/models/user_spec.rb[1:1:3]                            | passed  | 0.01044 seconds |
-./spec/models/user_spec.rb[1:1:4]                            | passed  | 0.01043 seconds |
-./spec/models/user_spec.rb[1:1:5]                            | passed  | 0.01091 seconds |
-./spec/models/user_spec.rb[1:1:6]                            | passed  | 0.01626 seconds |
-./spec/models/user_spec.rb[1:1:7]                            | passed  | 0.01197 seconds |
-./spec/models/user_spec.rb[1:1:8]                            | passed  | 0.00804 seconds |
-./spec/models/user_spec.rb[1:1:9]                            | passed  | 0.00988 seconds |
-./spec/models/user_spec.rb[1:2:1]                            | passed  | 0.01213 seconds |
-./spec/models/user_spec.rb[1:3:1]                            | passed  | 0.01725 seconds |
-./spec/requests/account_activations_request_spec.rb[1:1:1:1] | passed  | 0.02637 seconds |
-./spec/requests/account_activations_request_spec.rb[1:1:1:2] | passed  | 0.02538 seconds |
-./spec/requests/account_activations_request_spec.rb[1:1:1:3] | passed  | 0.02546 seconds |
-./spec/requests/account_activations_request_spec.rb[1:1:2:1] | passed  | 0.02349 seconds |
-./spec/requests/account_activations_request_spec.rb[1:1:2:2] | passed  | 0.03032 seconds |
-./spec/requests/comments_request_spec.rb[1:1:1]              | failed  | 0.00707 seconds |
-./spec/requests/comments_request_spec.rb[1:2:1]              | failed  | 0.01274 seconds |
-./spec/requests/favorites_spec.rb[1:1:1:1]                   | passed  | 0.03065 seconds |
-./spec/requests/favorites_spec.rb[1:1:1:2]                   | passed  | 0.03511 seconds |
-./spec/requests/favorites_spec.rb[1:1:1:3]                   | passed  | 0.03147 seconds |
-./spec/requests/favorites_spec.rb[1:1:1:4]                   | passed  | 0.03538 seconds |
-./spec/requests/favorites_spec.rb[1:1:2:1]                   | passed  | 0.01434 seconds |
-./spec/requests/favorites_spec.rb[1:1:2:2]                   | passed  | 0.01415 seconds |
-./spec/requests/microposts_destroy_spec.rb[1:1:1]            | passed  | 0.81802 seconds |
-./spec/requests/microposts_destroy_spec.rb[1:2:1]            | passed  | 0.2393 seconds  |
-./spec/requests/microposts_destroy_spec.rb[1:3:1]            | passed  | 0.02013 seconds |
-./spec/requests/microposts_request_spec.rb[1:1:1]            | passed  | 0.03902 seconds |
-./spec/requests/microposts_request_spec.rb[1:1:2]            | passed  | 0.0742 seconds  |
-./spec/requests/microposts_request_spec.rb[1:1:3]            | passed  | 0.06245 seconds |
-./spec/requests/microposts_request_spec.rb[1:2:1]            | passed  | 0.02072 seconds |
-./spec/requests/microposts_request_spec.rb[1:2:2]            | passed  | 0.0201 seconds  |
-./spec/requests/microposts_show_spec.rb[1:1:1]               | passed  | 0.045 seconds   |
-./spec/requests/microposts_show_spec.rb[1:2:1]               | passed  | 0.02056 seconds |
-./spec/requests/password_resets_spec.rb[1:1:1]               | passed  | 0.01267 seconds |
-./spec/requests/password_resets_spec.rb[1:2:1]               | passed  | 0.01206 seconds |
-./spec/requests/password_resets_spec.rb[1:2:2:1]             | passed  | 0.02308 seconds |
-./spec/requests/password_resets_spec.rb[1:2:2:2]             | passed  | 0.01931 seconds |
-./spec/requests/password_resets_spec.rb[1:2:2:3]             | passed  | 0.01907 seconds |
-./spec/requests/password_resets_spec.rb[1:2:2:4]             | passed  | 0.01894 seconds |
-./spec/requests/password_resets_spec.rb[1:3:1]               | passed  | 0.02927 seconds |
-./spec/requests/password_resets_spec.rb[1:3:2]               | passed  | 0.02598 seconds |
-./spec/requests/password_resets_spec.rb[1:3:3]               | passed  | 0.02698 seconds |
-./spec/requests/password_resets_spec.rb[1:3:4]               | passed  | 0.02867 seconds |
-./spec/requests/password_resets_spec.rb[1:4:1:1]             | passed  | 0.03193 seconds |
-./spec/requests/password_resets_spec.rb[1:4:1:2]             | passed  | 0.12217 seconds |
-./spec/requests/password_resets_spec.rb[1:4:1:3]             | passed  | 0.03156 seconds |
-./spec/requests/password_resets_spec.rb[1:4:1:4]             | passed  | 0.03366 seconds |
-./spec/requests/password_resets_spec.rb[1:4:1:5]             | passed  | 0.03754 seconds |
-./spec/requests/relationship_spec.rb[1:1:1]                  | passed  | 0.01252 seconds |
-./spec/requests/relationship_spec.rb[1:1:2]                  | passed  | 0.01203 seconds |
-./spec/requests/relationship_spec.rb[1:1:3]                  | passed  | 0.00742 seconds |
-./spec/requests/relationship_spec.rb[1:1:4]                  | passed  | 0.01449 seconds |
-./spec/requests/relationship_spec.rb[1:2:1]                  | passed  | 0.0296 seconds  |
-./spec/requests/relationship_spec.rb[1:2:2]                  | passed  | 0.03331 seconds |
-./spec/requests/relationship_spec.rb[1:2:3]                  | passed  | 0.03136 seconds |
-./spec/requests/relationship_spec.rb[1:2:4]                  | passed  | 0.03588 seconds |
-./spec/requests/sessions_spec.rb[1:1:1]                      | passed  | 0.0137 seconds  |
-./spec/requests/static_pages_spec.rb[1:1:1]                  | passed  | 0.01233 seconds |
-./spec/requests/static_pages_spec.rb[1:2:1]                  | passed  | 0.01403 seconds |
-./spec/requests/static_pages_spec.rb[1:3:1]                  | passed  | 0.01437 seconds |
-./spec/requests/users_destroy_spec.rb[1:1:1]                 | passed  | 0.05116 seconds |
-./spec/requests/users_destroy_spec.rb[1:2:1]                 | passed  | 0.03638 seconds |
-./spec/requests/users_destroy_spec.rb[1:2:2]                 | passed  | 0.03456 seconds |
-./spec/requests/users_destroy_spec.rb[1:3:1]                 | passed  | 0.02533 seconds |
-./spec/requests/users_destroy_spec.rb[1:4:1]                 | passed  | 0.03646 seconds |
-./spec/requests/users_edit_spec.rb[1:1:1]                    | passed  | 0.06152 seconds |
-./spec/requests/users_edit_spec.rb[1:2:1]                    | passed  | 0.0281 seconds  |
-./spec/requests/users_edit_spec.rb[1:3:1]                    | passed  | 0.03916 seconds |
-./spec/requests/users_index_spec.rb[1:1:1]                   | passed  | 0.03851 seconds |
-./spec/requests/users_index_spec.rb[1:2:1]                   | passed  | 0.02054 seconds |
-./spec/requests/users_index_spec.rb[1:3]                     | passed  | 0.03543 seconds |
-./spec/requests/users_login_spec.rb[1:1]                     | passed  | 0.01987 seconds |
-./spec/requests/users_login_spec.rb[1:2]                     | passed  | 0.07148 seconds |
-./spec/requests/users_login_spec.rb[1:3]                     | passed  | 0.03298 seconds |
-./spec/requests/users_login_spec.rb[2:1:1]                   | passed  | 0.01745 seconds |
-./spec/requests/users_login_spec.rb[2:1:2]                   | passed  | 0.01758 seconds |
-./spec/requests/users_login_spec.rb[2:2:1]                   | passed  | 0.02818 seconds |
-./spec/requests/users_show_spec.rb[1:1]                      | passed  | 0.02915 seconds |
-./spec/requests/users_signup_spec.rb[1:1]                    | passed  | 0.01276 seconds |
-./spec/requests/users_signup_spec.rb[1:2]                    | passed  | 0.03961 seconds |
-./spec/requests/users_signup_spec.rb[1:3]                    | passed  | 0.0281 seconds  |
-./spec/requests/users_spec.rb[1:1:1]                         | passed  | 0.01202 seconds |
-./spec/requests/users_spec.rb[1:1:2]                         | passed  | 0.01667 seconds |
-./spec/requests/users_spec.rb[1:2:1:1]                       | passed  | 0.01598 seconds |
-./spec/requests/users_spec.rb[1:2:1:2]                       | passed  | 0.02178 seconds |
-./spec/requests/users_spec.rb[1:2:1:3]                       | passed  | 0.01595 seconds |
-./spec/requests/users_spec.rb[1:2:1:4]                       | passed  | 0.01578 seconds |
-./spec/requests/users_spec.rb[1:2:2]                         | passed  | 0.01834 seconds |
-./spec/requests/users_spec.rb[1:3:1:1]                       | passed  | 0.0187 seconds  |
-./spec/requests/users_spec.rb[1:3:2]                         | passed  | 0.03198 seconds |
-./spec/static_pages_request_spec.rb[1:1:1:1]                 | passed  | 0.01259 seconds |
-./spec/static_pages_request_spec.rb[1:1:1:2]                 | passed  | 0.01236 seconds |
-./spec/system/microposts_spec.rb[1:1:1:1]                    | passed  | 0.05844 seconds |
-./spec/system/microposts_spec.rb[1:1:2:1]                    | passed  | 0.10865 seconds |
-./spec/system/microposts_spec.rb[1:1:2:2]                    | passed  | 0.07538 seconds |
-./spec/system/microposts_spec.rb[1:2:1:1]                    | passed  | 0.06312 seconds |
-./spec/system/microposts_spec.rb[1:2:2:1]                    | passed  | 9.78 seconds    |
-./spec/system/relationship_spec.rb[1:1:1:1]                  | passed  | 0.08368 seconds |
-./spec/system/relationship_spec.rb[1:1:1:2]                  | passed  | 0.0819 seconds  |
-./spec/system/relationship_spec.rb[1:1:1:3]                  | passed  | 0.0833 seconds  |
-./spec/system/relationship_spec.rb[1:2:1:1]                  | passed  | 0.08359 seconds |
-./spec/system/relationship_spec.rb[1:2:1:2]                  | passed  | 0.08481 seconds |
-./spec/system/relationship_spec.rb[1:2:1:3]                  | passed  | 0.09323 seconds |
-./spec/system/relationship_spec.rb[1:3:1]                    | passed  | 0.06397 seconds |
-./spec/system/relationship_spec.rb[1:3:2]                    | passed  | 0.0759 seconds  |
-./spec/system/relationship_spec.rb[1:3:3]                    | passed  | 0.06464 seconds |
-./spec/system/sessions_spec.rb[1:1:1:1]                      | passed  | 0.0204 seconds  |
-./spec/system/sessions_spec.rb[1:1:1:2]                      | passed  | 0.0206 seconds  |
-./spec/system/sessions_spec.rb[1:1:1:3]                      | passed  | 0.02105 seconds |
-./spec/system/sessions_spec.rb[1:1:1:4]                      | passed  | 0.02059 seconds |
-./spec/system/sessions_spec.rb[1:1:2:1]                      | passed  | 0.03701 seconds |
-./spec/system/sessions_spec.rb[1:1:2:2]                      | passed  | 0.03503 seconds |
-./spec/system/users_spec.rb[1:1:1:1]                         | passed  | 0.35444 seconds |
-./spec/system/users_spec.rb[1:1:2:1]                         | passed  | 0.32383 seconds |
-./spec/system/users_spec.rb[1:1:3:1]                         | passed  | 0.09083 seconds |
-./spec/system/users_spec.rb[1:1:3:2]                         | passed  | 0.1398 seconds  |
-./spec/system/users_spec.rb[1:1:3:3]                         | passed  | 0.24134 seconds |
-./spec/system/users_spec.rb[1:1:3:4]                         | passed  | 0.14026 seconds |
-./spec/system/users_spec.rb[1:2:1:1]                         | passed  | 0.04294 seconds |
-./spec/system/users_spec.rb[1:2:1:2]                         | passed  | 0.03952 seconds |
-./spec/system/users_spec.rb[1:2:2:1]                         | passed  | 0.07654 seconds |
-./spec/system/users_spec.rb[1:2:2:2]                         | passed  | 0.06367 seconds |
-./spec/system/users_spec.rb[1:3:1:1]                         | passed  | 0.09261 seconds |
-./spec/system/users_spec.rb[1:3:2]                           | passed  | 0.13173 seconds |
-./spec/system/users_spec.rb[1:3:3]                           | passed  | 0.12286 seconds |
-./spec/system/users_spec.rb[1:3:4:1]                         | passed  | 1.58 seconds    |
-./spec/system/users_spec.rb[1:4:1:1]                         | passed  | 0.15677 seconds |
-./spec/system/users_spec.rb[1:4:1:2]                         | passed  | 0.15747 seconds |
-./spec/system/users_spec.rb[1:4:1:3]                         | passed  | 0.16786 seconds |
-./spec/system/users_spec.rb[1:4:1:4]                         | passed  | 0.14654 seconds |
-./spec/system/users_spec.rb[1:4:1:5]                         | passed  | 0.21981 seconds |
-./spec/system/users_spec.rb[1:4:2:1]                         | passed  | 2.91 seconds    |
+example_id                                                                                                      | status  | run_time        |
+--------------------------------------------------------------------------------------------------------------- | ------- | --------------- |
+./spec/hello_spec.rb[1:1]                                                                                       | passed  | 0.00022 seconds |
+./spec/mailers/user_mailer_spec.rb[1:1:1]                                                                       | passed  | 0.00996 seconds |
+./spec/mailers/user_mailer_spec.rb[1:1:2]                                                                       | passed  | 0.0098 seconds  |
+./spec/mailers/user_mailer_spec.rb[1:1:3]                                                                       | passed  | 0.00904 seconds |
+./spec/mailers/user_mailer_spec.rb[1:1:4]                                                                       | passed  | 0.00871 seconds |
+./spec/mailers/user_mailer_spec.rb[1:1:5]                                                                       | passed  | 0.01038 seconds |
+./spec/mailers/user_mailer_spec.rb[1:1:6]                                                                       | passed  | 0.00884 seconds |
+./spec/models/comment_spec.rb[1:1]                                                                              | pending | 0.00001 seconds |
+./spec/models/favorite_spec.rb[1:1]                                                                             | passed  | 0.01299 seconds |
+./spec/models/favorite_spec.rb[1:2]                                                                             | passed  | 0.01464 seconds |
+./spec/models/favorite_spec.rb[1:3]                                                                             | passed  | 0.01364 seconds |
+./spec/models/micropost_spec.rb[1:1:1]                                                                          | passed  | 0.02569 seconds |
+./spec/models/micropost_spec.rb[1:1:2]                                                                          | passed  | 0.03184 seconds |
+./spec/models/micropost_spec.rb[1:1:3]                                                                          | passed  | 0.03235 seconds |
+./spec/models/micropost_spec.rb[1:1:4]                                                                          | passed  | 0.02722 seconds |
+./spec/models/micropost_spec.rb[1:2:1]                                                                          | passed  | 0.02632 seconds |
+./spec/models/relationship_spec.rb[1:1]                                                                         | passed  | 0.0126 seconds  |
+./spec/models/relationship_spec.rb[1:2]                                                                         | passed  | 0.01887 seconds |
+./spec/models/relationship_spec.rb[1:3]                                                                         | passed  | 0.01349 seconds |
+./spec/models/user_spec.rb[1:1:1]                                                                               | passed  | 0.01266 seconds |
+./spec/models/user_spec.rb[1:1:2]                                                                               | passed  | 0.01053 seconds |
+./spec/models/user_spec.rb[1:1:3]                                                                               | passed  | 0.01044 seconds |
+./spec/models/user_spec.rb[1:1:4]                                                                               | passed  | 0.01043 seconds |
+./spec/models/user_spec.rb[1:1:5]                                                                               | passed  | 0.01091 seconds |
+./spec/models/user_spec.rb[1:1:6]                                                                               | passed  | 0.01626 seconds |
+./spec/models/user_spec.rb[1:1:7]                                                                               | passed  | 0.01197 seconds |
+./spec/models/user_spec.rb[1:1:8]                                                                               | passed  | 0.00804 seconds |
+./spec/models/user_spec.rb[1:1:9]                                                                               | passed  | 0.00988 seconds |
+./spec/models/user_spec.rb[1:2:1]                                                                               | passed  | 0.01213 seconds |
+./spec/models/user_spec.rb[1:3:1]                                                                               | passed  | 0.01725 seconds |
+./spec/requests/account_activations_request_spec.rb[1:1:1:1]                                                    | passed  | 0.02637 seconds |
+./spec/requests/account_activations_request_spec.rb[1:1:1:2]                                                    | passed  | 0.02538 seconds |
+./spec/requests/account_activations_request_spec.rb[1:1:1:3]                                                    | passed  | 0.02546 seconds |
+./spec/requests/account_activations_request_spec.rb[1:1:2:1]                                                    | passed  | 0.02349 seconds |
+./spec/requests/account_activations_request_spec.rb[1:1:2:2]                                                    | passed  | 0.03032 seconds |
+./spec/requests/comments_request_spec.rb[1:1:1]                                                                 | failed  | 0.00707 seconds |
+./spec/requests/comments_request_spec.rb[1:2:1]                                                                 | failed  | 0.01274 seconds |
+./spec/requests/favorites_spec.rb[1:1:1:1]                                                                      | passed  | 0.03065 seconds |
+./spec/requests/favorites_spec.rb[1:1:1:2]                                                                      | passed  | 0.03511 seconds |
+./spec/requests/favorites_spec.rb[1:1:1:3]                                                                      | passed  | 0.03147 seconds |
+./spec/requests/favorites_spec.rb[1:1:1:4]                                                                      | passed  | 0.03538 seconds |
+./spec/requests/favorites_spec.rb[1:1:2:1]                                                                      | passed  | 0.01434 seconds |
+./spec/requests/favorites_spec.rb[1:1:2:2]                                                                      | passed  | 0.01415 seconds |
+./spec/requests/microposts_destroy_spec.rb[1:1:1]                                                               | passed  | 0.81802 seconds |
+./spec/requests/microposts_destroy_spec.rb[1:2:1]                                                               | passed  | 0.2393 seconds  |
+./spec/requests/microposts_destroy_spec.rb[1:3:1]                                                               | passed  | 0.02013 seconds |
+./spec/requests/microposts_request_spec.rb[1:1:1]                                                               | passed  | 0.03902 seconds |
+./spec/requests/microposts_request_spec.rb[1:1:2]                                                               | passed  | 0.0742 seconds  |
+./spec/requests/microposts_request_spec.rb[1:1:3]                                                               | passed  | 0.06245 seconds |
+./spec/requests/microposts_request_spec.rb[1:2:1]                                                               | passed  | 0.02072 seconds |
+./spec/requests/microposts_request_spec.rb[1:2:2]                                                               | passed  | 0.0201 seconds  |
+./spec/requests/microposts_show_spec.rb[1:1:1]                                                                  | passed  | 0.045 seconds   |
+./spec/requests/microposts_show_spec.rb[1:2:1]                                                                  | passed  | 0.02056 seconds |
+./spec/requests/password_resets_spec.rb[1:1:1]                                                                  | passed  | 0.01267 seconds |
+./spec/requests/password_resets_spec.rb[1:2:1]                                                                  | passed  | 0.01206 seconds |
+./spec/requests/password_resets_spec.rb[1:2:2:1]                                                                | passed  | 0.02308 seconds |
+./spec/requests/password_resets_spec.rb[1:2:2:2]                                                                | passed  | 0.01931 seconds |
+./spec/requests/password_resets_spec.rb[1:2:2:3]                                                                | passed  | 0.01907 seconds |
+./spec/requests/password_resets_spec.rb[1:2:2:4]                                                                | passed  | 0.01894 seconds |
+./spec/requests/password_resets_spec.rb[1:3:1]                                                                  | passed  | 0.02927 seconds |
+./spec/requests/password_resets_spec.rb[1:3:2]                                                                  | passed  | 0.02598 seconds |
+./spec/requests/password_resets_spec.rb[1:3:3]                                                                  | passed  | 0.02698 seconds |
+./spec/requests/password_resets_spec.rb[1:3:4]                                                                  | passed  | 0.02867 seconds |
+./spec/requests/password_resets_spec.rb[1:4:1:1]                                                                | passed  | 0.03193 seconds |
+./spec/requests/password_resets_spec.rb[1:4:1:2]                                                                | passed  | 0.12217 seconds |
+./spec/requests/password_resets_spec.rb[1:4:1:3]                                                                | passed  | 0.03156 seconds |
+./spec/requests/password_resets_spec.rb[1:4:1:4]                                                                | passed  | 0.03366 seconds |
+./spec/requests/password_resets_spec.rb[1:4:1:5]                                                                | passed  | 0.03754 seconds |
+./spec/requests/relationship_spec.rb[1:1:1]                                                                     | passed  | 0.01252 seconds |
+./spec/requests/relationship_spec.rb[1:1:2]                                                                     | passed  | 0.01203 seconds |
+./spec/requests/relationship_spec.rb[1:1:3]                                                                     | passed  | 0.00742 seconds |
+./spec/requests/relationship_spec.rb[1:1:4]                                                                     | passed  | 0.01449 seconds |
+./spec/requests/relationship_spec.rb[1:2:1]                                                                     | passed  | 0.0296 seconds  |
+./spec/requests/relationship_spec.rb[1:2:2]                                                                     | passed  | 0.03331 seconds |
+./spec/requests/relationship_spec.rb[1:2:3]                                                                     | passed  | 0.03136 seconds |
+./spec/requests/relationship_spec.rb[1:2:4]                                                                     | passed  | 0.03588 seconds |
+./spec/requests/sessions_spec.rb[1:1:1]                                                                         | passed  | 0.0137 seconds  |
+./spec/requests/static_pages_spec.rb[1:1:1]                                                                     | passed  | 0.01233 seconds |
+./spec/requests/static_pages_spec.rb[1:2:1]                                                                     | passed  | 0.01403 seconds |
+./spec/requests/static_pages_spec.rb[1:3:1]                                                                     | passed  | 0.01437 seconds |
+./spec/requests/users_destroy_spec.rb[1:1:1]                                                                    | passed  | 0.05116 seconds |
+./spec/requests/users_destroy_spec.rb[1:2:1]                                                                    | passed  | 0.03638 seconds |
+./spec/requests/users_destroy_spec.rb[1:2:2]                                                                    | passed  | 0.03456 seconds |
+./spec/requests/users_destroy_spec.rb[1:3:1]                                                                    | passed  | 0.02533 seconds |
+./spec/requests/users_destroy_spec.rb[1:4:1]                                                                    | passed  | 0.03646 seconds |
+./spec/requests/users_edit_spec.rb[1:1:1]                                                                       | passed  | 0.06152 seconds |
+./spec/requests/users_edit_spec.rb[1:2:1]                                                                       | passed  | 0.0281 seconds  |
+./spec/requests/users_edit_spec.rb[1:3:1]                                                                       | passed  | 0.03916 seconds |
+./spec/requests/users_index_spec.rb[1:1:1]                                                                      | passed  | 0.03851 seconds |
+./spec/requests/users_index_spec.rb[1:2:1]                                                                      | passed  | 0.02054 seconds |
+./spec/requests/users_index_spec.rb[1:3]                                                                        | passed  | 0.03543 seconds |
+./spec/requests/users_login_spec.rb[1:1]                                                                        | passed  | 0.01987 seconds |
+./spec/requests/users_login_spec.rb[1:2]                                                                        | passed  | 0.07148 seconds |
+./spec/requests/users_login_spec.rb[1:3]                                                                        | passed  | 0.03298 seconds |
+./spec/requests/users_login_spec.rb[2:1:1]                                                                      | passed  | 0.01745 seconds |
+./spec/requests/users_login_spec.rb[2:1:2]                                                                      | passed  | 0.01758 seconds |
+./spec/requests/users_login_spec.rb[2:2:1]                                                                      | passed  | 0.02818 seconds |
+./spec/requests/users_show_spec.rb[1:1]                                                                         | passed  | 0.02915 seconds |
+./spec/requests/users_signup_spec.rb[1:1]                                                                       | passed  | 0.01276 seconds |
+./spec/requests/users_signup_spec.rb[1:2]                                                                       | passed  | 0.03961 seconds |
+./spec/requests/users_signup_spec.rb[1:3]                                                                       | passed  | 0.0281 seconds  |
+./spec/requests/users_spec.rb[1:1:1]                                                                            | passed  | 0.01202 seconds |
+./spec/requests/users_spec.rb[1:1:2]                                                                            | passed  | 0.01667 seconds |
+./spec/requests/users_spec.rb[1:2:1:1]                                                                          | passed  | 0.01598 seconds |
+./spec/requests/users_spec.rb[1:2:1:2]                                                                          | passed  | 0.02178 seconds |
+./spec/requests/users_spec.rb[1:2:1:3]                                                                          | passed  | 0.01595 seconds |
+./spec/requests/users_spec.rb[1:2:1:4]                                                                          | passed  | 0.01578 seconds |
+./spec/requests/users_spec.rb[1:2:2]                                                                            | passed  | 0.01834 seconds |
+./spec/requests/users_spec.rb[1:3:1:1]                                                                          | passed  | 0.0187 seconds  |
+./spec/requests/users_spec.rb[1:3:2]                                                                            | passed  | 0.03198 seconds |
+./spec/static_pages_request_spec.rb[1:1:1:1]                                                                    | passed  | 0.01259 seconds |
+./spec/static_pages_request_spec.rb[1:1:1:2]                                                                    | passed  | 0.01236 seconds |
+./spec/system/microposts_spec.rb[1:1:1:1]                                                                       | passed  | 0.05844 seconds |
+./spec/system/microposts_spec.rb[1:1:2:1]                                                                       | passed  | 0.10865 seconds |
+./spec/system/microposts_spec.rb[1:1:2:2]                                                                       | passed  | 0.07538 seconds |
+./spec/system/microposts_spec.rb[1:2:1:1]                                                                       | passed  | 0.06312 seconds |
+./spec/system/microposts_spec.rb[1:2:2:1]                                                                       | passed  | 9.78 seconds    |
+./spec/system/relationship_spec.rb[1:1:1:1]                                                                     | passed  | 0.08368 seconds |
+./spec/system/relationship_spec.rb[1:1:1:2]                                                                     | passed  | 0.0819 seconds  |
+./spec/system/relationship_spec.rb[1:1:1:3]                                                                     | passed  | 0.0833 seconds  |
+./spec/system/relationship_spec.rb[1:2:1:1]                                                                     | passed  | 0.08359 seconds |
+./spec/system/relationship_spec.rb[1:2:1:2]                                                                     | passed  | 0.08481 seconds |
+./spec/system/relationship_spec.rb[1:2:1:3]                                                                     | passed  | 0.09323 seconds |
+./spec/system/relationship_spec.rb[1:3:1]                                                                       | passed  | 0.06397 seconds |
+./spec/system/relationship_spec.rb[1:3:2]                                                                       | passed  | 0.0759 seconds  |
+./spec/system/relationship_spec.rb[1:3:3]                                                                       | passed  | 0.06464 seconds |
+./spec/system/sessions_spec.rb[1:1:1:1]                                                                         | passed  | 0.0204 seconds  |
+./spec/system/sessions_spec.rb[1:1:1:2]                                                                         | passed  | 0.0206 seconds  |
+./spec/system/sessions_spec.rb[1:1:1:3]                                                                         | passed  | 0.02105 seconds |
+./spec/system/sessions_spec.rb[1:1:1:4]                                                                         | passed  | 0.02059 seconds |
+./spec/system/sessions_spec.rb[1:1:2:1]                                                                         | passed  | 0.03701 seconds |
+./spec/system/sessions_spec.rb[1:1:2:2]                                                                         | passed  | 0.03503 seconds |
+./spec/system/users_spec.rb[1:1:1:1]                                                                            | passed  | 0.35444 seconds |
+./spec/system/users_spec.rb[1:1:2:1]                                                                            | passed  | 0.32383 seconds |
+./spec/system/users_spec.rb[1:1:3:1]                                                                            | passed  | 0.09083 seconds |
+./spec/system/users_spec.rb[1:1:3:2]                                                                            | passed  | 0.1398 seconds  |
+./spec/system/users_spec.rb[1:1:3:3]                                                                            | passed  | 0.24134 seconds |
+./spec/system/users_spec.rb[1:1:3:4]                                                                            | passed  | 0.14026 seconds |
+./spec/system/users_spec.rb[1:2:1:1]                                                                            | passed  | 0.04294 seconds |
+./spec/system/users_spec.rb[1:2:1:2]                                                                            | passed  | 0.03952 seconds |
+./spec/system/users_spec.rb[1:2:2:1]                                                                            | passed  | 0.07654 seconds |
+./spec/system/users_spec.rb[1:2:2:2]                                                                            | passed  | 0.06367 seconds |
+./spec/system/users_spec.rb[1:3:1:1]                                                                            | passed  | 0.09261 seconds |
+./spec/system/users_spec.rb[1:3:2]                                                                              | passed  | 0.13173 seconds |
+./spec/system/users_spec.rb[1:3:3]                                                                              | passed  | 0.12286 seconds |
+./spec/system/users_spec.rb[1:3:4:1]                                                                            | passed  | 1.58 seconds    |
+./spec/system/users_spec.rb[1:4:1:1]                                                                            | passed  | 0.15677 seconds |
+./spec/system/users_spec.rb[1:4:1:2]                                                                            | passed  | 0.15747 seconds |
+./spec/system/users_spec.rb[1:4:1:3]                                                                            | passed  | 0.16786 seconds |
+./spec/system/users_spec.rb[1:4:1:4]                                                                            | passed  | 0.14654 seconds |
+./spec/system/users_spec.rb[1:4:1:5]                                                                            | passed  | 0.21981 seconds |
+./spec/system/users_spec.rb[1:4:2:1]                                                                            | passed  | 2.91 seconds    |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/hello_spec.rb[1:1]                                    | passed  | 0.00018 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:1]                    | passed  | 0.00532 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:2]                    | passed  | 0.00534 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:3]                    | passed  | 0.00529 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:4]                    | passed  | 0.00482 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:5]                    | passed  | 0.00583 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/mailers/user_mailer_spec.rb[1:1:6]                    | passed  | 0.00468 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/favorite_spec.rb[1:1]                          | passed  | 0.00919 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/favorite_spec.rb[1:2]                          | passed  | 0.01011 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/favorite_spec.rb[1:3]                          | passed  | 0.01006 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/micropost_spec.rb[1:1:1]                       | passed  | 0.016 seconds   |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/micropost_spec.rb[1:1:2]                       | passed  | 0.01891 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/micropost_spec.rb[1:1:3]                       | passed  | 0.01916 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/micropost_spec.rb[1:1:4]                       | passed  | 0.01668 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/micropost_spec.rb[1:2:1]                       | passed  | 0.01957 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/notification_spec.rb[1:1]                      | passed  | 0.00486 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/notification_spec.rb[1:2]                      | passed  | 0.00523 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/notification_spec.rb[1:3]                      | passed  | 0.0054 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/notification_spec.rb[1:4]                      | passed  | 0.00501 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/notification_spec.rb[1:5]                      | passed  | 0.00522 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/relationship_spec.rb[1:1]                      | passed  | 0.008 seconds   |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/relationship_spec.rb[1:2]                      | passed  | 0.00944 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/relationship_spec.rb[1:3]                      | passed  | 0.01027 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:1]                            | passed  | 0.00705 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:2]                            | passed  | 0.00524 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:3]                            | passed  | 0.00511 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:4]                            | passed  | 0.00592 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:5]                            | passed  | 0.00536 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:6]                            | passed  | 0.00864 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:7]                            | passed  | 0.00709 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:8]                            | passed  | 0.00428 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:1:9]                            | passed  | 0.0053 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:2:1]                            | passed  | 0.00661 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/models/user_spec.rb[1:3:1]                            | passed  | 0.00977 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/account_activations_request_spec.rb[1:1:1:1] | passed  | 0.01872 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/account_activations_request_spec.rb[1:1:1:2] | passed  | 0.0187 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/account_activations_request_spec.rb[1:1:1:3] | passed  | 0.01867 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/account_activations_request_spec.rb[1:1:2:1] | passed  | 0.01935 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/account_activations_request_spec.rb[1:1:2:2] | passed  | 0.01596 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:1:1]                   | passed  | 0.02339 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:1:2]                   | passed  | 0.02765 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:1:3]                   | passed  | 0.02285 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:1:4]                   | passed  | 0.02482 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:2:1]                   | passed  | 0.00969 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/favorites_spec.rb[1:1:2:2]                   | passed  | 0.00994 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_destroy_spec.rb[1:1:1]            | passed  | 0.02856 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_destroy_spec.rb[1:2:1]            | passed  | 0.01852 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_destroy_spec.rb[1:3:1]            | passed  | 0.01245 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_request_spec.rb[1:1:1]            | passed  | 0.02072 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_request_spec.rb[1:1:2]            | passed  | 0.03938 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_request_spec.rb[1:1:3]            | passed  | 0.03302 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_request_spec.rb[1:2:1]            | passed  | 0.00911 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_request_spec.rb[1:2:2]            | passed  | 0.00976 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_show_spec.rb[1:1:1]               | passed  | 0.02268 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/microposts_show_spec.rb[1:2:1]               | passed  | 0.01001 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:1:1]               | passed  | 0.00772 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:2:1]               | passed  | 0.00885 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:2:2:1]             | passed  | 0.01192 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:2:2:2]             | passed  | 0.01295 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:2:2:3]             | passed  | 0.01252 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:2:2:4]             | passed  | 0.01213 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:3:1]               | passed  | 0.01811 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:3:2]               | passed  | 0.0157 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:3:3]               | passed  | 0.01636 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:3:4]               | passed  | 0.01999 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:4:1:1]             | passed  | 0.01923 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:4:1:2]             | passed  | 0.01925 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:4:1:3]             | passed  | 0.01894 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:4:1:4]             | passed  | 0.01993 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/password_resets_spec.rb[1:4:1:5]             | passed  | 0.01832 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:1:1]                  | passed  | 0.00823 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:1:2]                  | passed  | 0.00844 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:1:3]                  | passed  | 0.00499 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:1:4]                  | passed  | 0.00777 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:2:1]                  | passed  | 0.01857 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:2:2]                  | passed  | 0.02003 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:2:3]                  | passed  | 0.02131 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/relationship_spec.rb[1:2:4]                  | passed  | 0.02003 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/sessions_spec.rb[1:1:1]                      | passed  | 0.00776 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/static_pages_spec.rb[1:1:1]                  | passed  | 0.0084 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/static_pages_spec.rb[1:2:1]                  | passed  | 0.00929 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/static_pages_spec.rb[1:3:1]                  | passed  | 0.02648 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_destroy_spec.rb[1:1:1]                 | passed  | 0.03247 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_destroy_spec.rb[1:2:1]                 | passed  | 0.02273 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_destroy_spec.rb[1:2:2]                 | passed  | 0.02148 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_destroy_spec.rb[1:3:1]                 | passed  | 0.0156 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_destroy_spec.rb[1:4:1]                 | passed  | 0.02338 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_edit_spec.rb[1:1:1]                    | passed  | 0.03448 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_edit_spec.rb[1:2:1]                    | passed  | 0.01625 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_edit_spec.rb[1:3:1]                    | passed  | 0.0226 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_index_spec.rb[1:1:1]                   | passed  | 0.02186 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_index_spec.rb[1:2:1]                   | passed  | 0.0114 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_index_spec.rb[1:3]                     | passed  | 0.0199 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[1:1]                     | passed  | 0.01322 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[1:2]                     | passed  | 0.04148 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[1:3]                     | passed  | 0.01956 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[2:1:1]                   | passed  | 0.0114 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[2:1:2]                   | passed  | 0.01132 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_login_spec.rb[2:2:1]                   | passed  | 0.01866 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_show_spec.rb[1:1]                      | passed  | 0.04177 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_signup_spec.rb[1:1]                    | passed  | 0.00943 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_signup_spec.rb[1:2]                    | passed  | 0.02864 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_signup_spec.rb[1:3]                    | passed  | 0.02108 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:1:1]                         | passed  | 0.00909 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:1:2]                         | passed  | 0.00983 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:2:1:1]                       | passed  | 0.0116 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:2:1:2]                       | passed  | 0.01202 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:2:1:3]                       | passed  | 0.01186 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:2:1:4]                       | passed  | 0.01111 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:2:2]                         | passed  | 0.01371 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:3:1:1]                       | passed  | 0.01352 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/requests/users_spec.rb[1:3:2]                         | passed  | 0.0229 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/static_pages_request_spec.rb[1:1:1:1]                 | passed  | 0.00967 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/static_pages_request_spec.rb[1:1:1:2]                 | passed  | 0.00863 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/microposts_spec.rb[1:1:1:1]                    | passed  | 0.04151 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/microposts_spec.rb[1:1:2:1]                    | passed  | 0.07146 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/microposts_spec.rb[1:1:2:2]                    | passed  | 0.051 seconds   |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/microposts_spec.rb[1:2:1:1]                    | passed  | 0.04662 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/microposts_spec.rb[1:2:2:1]                    | passed  | 1.51 seconds    |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:1:1:1]                  | passed  | 0.06005 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:1:1:2]                  | passed  | 0.06106 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:1:1:3]                  | passed  | 0.06142 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:2:1:1]                  | passed  | 0.05964 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:2:1:2]                  | passed  | 0.06137 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:2:1:3]                  | passed  | 0.06011 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:3:1]                    | passed  | 0.04791 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:3:2]                    | passed  | 0.04619 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/relationship_spec.rb[1:3:3]                    | passed  | 0.05266 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:1:1]                      | passed  | 0.01377 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:1:2]                      | passed  | 0.01416 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:1:3]                      | passed  | 0.01387 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:1:4]                      | passed  | 0.01405 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:2:1]                      | passed  | 0.02449 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/sessions_spec.rb[1:1:2:2]                      | passed  | 0.02155 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:1:1]                         | passed  | 0.18669 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:2:1]                         | passed  | 0.19088 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:3:1]                         | passed  | 0.0378 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:3:2]                         | passed  | 0.08257 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:3:3]                         | passed  | 0.07666 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:1:3:4]                         | passed  | 0.0828 seconds  |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:2:1:1]                         | passed  | 0.02738 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:2:1:2]                         | passed  | 0.02128 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:2:2:1]                         | passed  | 0.05022 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:2:2:2]                         | passed  | 0.03931 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:3:1:1]                         | passed  | 0.06168 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:3:2]                           | passed  | 0.10813 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:3:3]                           | passed  | 0.09467 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:3:4:1]                         | passed  | 1.18 seconds    |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:1:1]                         | passed  | 0.65549 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:1:2]                         | passed  | 0.12382 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:1:3]                         | passed  | 0.11627 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:1:4]                         | passed  | 0.11337 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:1:5]                         | passed  | 0.15664 seconds |
+/Users/daiki/Desktop/cs_escape-2予備(comment finished)/spec/system/users_spec.rb[1:4:2:1]                         | passed  | 4.64 seconds    |

@@ -14,6 +14,11 @@ class CommentsController < ApplicationController
     if @comment.save
       flash[:success] = '投稿にコメントしました。'
       redirect_to micropost_path(@micropost)
+      if @user != current_user
+        @user.notifications.create(micropost_id: @micropost_id, variety: 2,
+                                   from_user_id: current_user.id,
+                                   content: @comment.content)
+        @user.update_attribute(:notification, true)
     else
       @micropost = Micropost.find(params[:micropost_id]) 
       @comments = @micropost.comments.includes(:user)
