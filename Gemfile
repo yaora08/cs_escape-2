@@ -30,11 +30,12 @@ gem 'carrierwave',             '1.2.2'
 
 group :production do
  gem 'fog', '1.42' 
+ gem 'pg', '1.1.4'
 end
 
 
 group :development, :test do
-  gem 'sqlite3', '1.4.1'
+  gem 'sqlite3', '1.4.2'
   gem 'byebug',  '11.0.1', platforms: [:mri, :mingw, :x64_mingw]
   gem 'rails-controller-testing'
   gem 'rspec-rails', '~> 4.0.0.beta2'
