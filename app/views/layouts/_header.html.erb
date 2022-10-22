@@ -19,7 +19,7 @@
 				<ul claÏss="sidebar-items">
 					<li><%= link_to "ホーム",root_path, class: "side-list"  '#' %></li>
 					<li><%= link_to "チャット", class: "side-list"  '#' %></li>
-					<li><%= link_to "プロフィール", class: "side-list"  '#' %></li>
+					<li><%= link_to "プロフィール", current_user, class: "side-list"  '#' %></li>
 					<li><%= link_to "新規投稿", new_micropost_path, class: "side-list" %></li>
 				</ul>
 			</nav>

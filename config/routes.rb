@@ -3,9 +3,10 @@ Rails.application.routes.draw do
   get 'comments/destroy'
   get 'password_resets/new'
   get 'password_resets/edit'
-  root   'static_pages#home'
+  root   'static_pages#home' 
   get    '/help',    to: 'static_pages#help'
   get    '/about',   to: 'static_pages#about'
+  get    '/all_posts',    to: 'static_pages#all_posts'
   get    '/signup',  to: 'users#new'
   get    '/login',   to: 'sessions#new'
   
@@ -13,6 +14,13 @@ Rails.application.routes.draw do
   delete '/logout',  to: 'sessions#destroy'
   post   "favorites/:micropost_id/create"  => "favorites#create"
   delete "favorites/:micropost_id/destroy" => "favorites#destroy"
+  resources :static_pages do
+    member do
+      get :all_posts
+    end
+  end
+
+
   resources :users do
     member do
       get :following, :followers, :favorites

@@ -467,6 +467,10 @@ form {
 }
 }
 
+.home-micropost {
+  display: flex;
+}
+
 
 /*----------users#new-------------*/
 .signup {
@@ -612,7 +616,7 @@ form {
   nav {
     ul {
       li {
-        text-align: center;
+ 
         padding: 15px 0;
          &:first-child{
           padding-top: 24px;
@@ -873,6 +877,11 @@ form {
 
 
 /* -----------users/edit------------ */
+
+.edit {
+  margin-left: 250px;
+}
+
 .gravatar_edit {
   height: 50px;
   margin-top: 28px;
@@ -1024,7 +1033,7 @@ span.image {
 /*----------microposts/new-----------*/
 
 .micropost_new {
-  margin: 0 auto;
+  margin-left: 250px;
   .gravatar {
     width: 70px;
     height: 70px;
