@@ -6,6 +6,13 @@ class StaticPagesController < ApplicationController
     end
   end
 
+  def all_posts
+    if logged_in?
+      @feed_items = Micropost.all.paginate(page: params[:page])
+      render 'home'
+    end
+  end
+
   def help
   end 
 
