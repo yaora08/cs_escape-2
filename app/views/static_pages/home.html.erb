@@ -7,7 +7,6 @@
 	<% if logged_in? %>
 		<%= render 'layouts/header' %>
 		<div class="main">
-			<div class="container">
 				<div class="row">
 					<div class="col-md-9">
 						<%# <span><%= pluralize(current_user.microposts.count, "件の投稿") %>
@@ -20,7 +19,7 @@
 						</div>
 					</div>
 				</div>
-			</div>
+			
 		<% else %>
 			<div class="static-page_home">
 				<p class="second-title">公務員の次のステップへ</p>

@@ -392,9 +392,11 @@ form {
 }
 
 .main {
-  margin-left: 250px;
+  width: 100%;
+  margin-left: 220px;
+  padding-right: 50px;
   .container {
-    width: 100%;
+    width: 95%;
     form {
       @import "bootstrap-sprockets";
       @import "bootstrap";
@@ -407,12 +409,12 @@ form {
 /* static_page#home*/
 
 .static-page {
-    font-family: ヒラギノ明朝 ProN;
     width: 100%;
     height: 100%;
 }
 
 .static-page_home {
+  font-family: ヒラギノ明朝 ProN;
   background-color: #222224;
   color: #fff;
 }
@@ -568,6 +570,7 @@ form {
 }
 
 .header_nav {
+  width: 100%;
   line-height: 70px;
   display: flex;
   align-items: center;
@@ -588,7 +591,6 @@ form {
   li {
     a {
       color: #919193;
-      margin-left: 20px;
     }     
     }
 }
@@ -601,13 +603,13 @@ form {
 .main-topic {
   display: flex;
   width: 100%;
-  padding-top: 70px;
+  padding: 70px 30px 0 30px;
 }
 
 .side {
-  width: 20%;
+  width: 170px;
   max-width: 250px;
-  background-color: #F9F9FC;
+  border-right: 2px solid #f1f1f3;
   height: 100vh;
   position: fixed;
   /*padding-bottom: 100000px;
@@ -621,26 +623,26 @@ form {
          &:first-child{
           padding-top: 24px;
           }
-          &:last-child {
-            background-color: rgb(175, 175, 178);
-            margin: 30px auto;
-            width: 120px;
-            height: 70px;
-            border-radius: 50%;
-            position: relative;
+          // &:last-child {
+          //   background-color: rgb(175, 175, 178);
+          //   margin: 30px auto;
+          //   width: 120px;
+          //   height: 70px;
+          //   border-radius: 50%;
+          //   position: relative;
             
            
-            a{
-              text-align: center;
-              position: absolute;
-              top:0;
-              left:0;
-              width:100%;
-              height:100%;
-              line-height: 70px;
-              color: #000;
-            }
-          }
+          //   a{
+          //     text-align: center;
+          //     position: absolute;
+          //     top:0;
+          //     left:0;
+          //     width:100%;
+          //     height:100%;
+          //     line-height: 70px;
+          //     color: #000;
+          //   }
+          // }
       }
       a {
         color: #919193;
@@ -661,12 +663,13 @@ form {
 .profile {
   display: flex;
   margin-top: 15px;
+  width: 810px;
 
 }
 
 .gravatar {
-  width: 180px;
-  height: 180px;
+  width: 150px;
+  height: 150px;
   margin-left: 30px;
 }
 
@@ -753,7 +756,7 @@ form {
   width: 810px;
   height: 100vh;
   margin-top: 70px;
-  margin-left: 80px;
+  margin-left: 50px;
 }
 
 .micropost_show_footer {
@@ -902,6 +905,7 @@ form {
   @import "bootstrap";
   list-style: none;
   margin-left: 40px;
+  width: 720px;
   li {
     overflow: auto;
     padding: 10px 0;
@@ -935,7 +939,7 @@ form {
   .content {
     text-align: start;
     display: block;
-    margin-left: 60px;
+    margin-left: 100px;
     img {
       display: block;
       padding: 5px 0;
@@ -1148,6 +1152,8 @@ span.image {
 }
 
 .show_follow_profile {
+  @import "bootstrap-sprockets";
+  @import "bootstrap";
   display: flex;
   margin-top: 30px;
   .gravatar {
@@ -1213,9 +1219,144 @@ span.image {
 /*----------------------
 　タブレット用css
 -------------------------*/
-// @media only screen and (max-width: 1024px) {
+@media only screen and (max-width: 768px) {
+  .main-topic {
+    font-size: 24px;
+  }
+
+  .main {
+    margin-top: 30px;
+    margin-left: 150px;
+  }
+
+  /*--staticpage/home--*/
+  .static-page {
+    .main {
+      margin-top: none;
+      margin-left: 200px;
+    }
+
+    .home-micropost{
+      width: 90%;
+      margin-top: -35px;
+      margin-left: 40px;
+
+      .show-micropost-button-favorite {
+        height: 70px;
+      }
+
+    }
+
+    .microposts {
+      width: 90%;
+      margin-left: 40px;
+
+    }
+
+    .show-micropost{
+      margin-left: none;
+    }
+  }
+
+
+
+
+  /*--header--*/
+  .navbar {
+    height: 100px;
+  }
+
+  .header_nav {
+    line-height: 100px;
+  }
+
+  .header_nav {
+    .header-title {
+      margin-left: 20px;
+    }
+
+    .logout {
+      margin-right: 20px;
+    }
+  }
+
+  .side {
+    width: 200px;
+    max-width: 250px;
+    border-right: 2px solid #f1f1f3;
+    height: 100vh;
+    position: fixed;
   
-// }
+    nav {
+      ul {
+        li { 
+          padding: 15px 0;
+           &:first-child{
+            padding-top: 54px;
+            }
+        }
+      }
+    }
+  }
+
+/*--user/show--*/
+.user-show {
+
+  .gravatar {
+    display: block;
+  }
+
+  .detail-name {
+    display: block;
+  }
+
+  .detail-introduction {
+    display: block;
+    height: 300px;
+  }
+
+.profile {
+  width: 90%;
+  margin-left: 85px;
+  display: block;
+}
+
+.user-edit {
+  width: 280px;
+  height: 50px;
+  line-height: 50px;
+}
+
+  .show-micropost-button {
+    margin-left: 85px;
+    margin-top: 70px;
+  }
+
+
+  .microposts {
+    width: 90%;
+    margin-left: 85px;
+    margin-top: 70px;
+  }
+}
+
+  .show-micropost {
+    margin-left: 0px;
+  }
+
+
+  /*--users/index--*/
+  .user-index {
+    .main {
+      margin-left: 190px;
+    }
+  }
+  
+}
+
+
+
+
 
 
 /*----------------------

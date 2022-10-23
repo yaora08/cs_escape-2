@@ -1,9 +1,11 @@
 <%= render 'layouts/header' %>
-<div class="main">
-	<% provide(:title, 'ユーザー一覧') %>
-	<%= will_paginate %>
-	<ul class="users">
-		<%= render @users %>
-	</ul>
-	<%= will_paginate %>
-</div>
+<section class="user-index">
+	<div class="main">
+		<% provide(:title, 'ユーザー一覧') %>
+		<%= will_paginate %>
+		<ul class="users">
+			<%= render @users %>
+		</ul>
+		<%= will_paginate %>
+	</div>
+</section>
