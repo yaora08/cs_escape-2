@@ -3,9 +3,6 @@
 <div class="main">
 	<div class="col-md-8">
 		<div class="show_follow_profile">
-			<div class="show_follow_profile_gravatar">
-				<%= link_to gravatar_for(@user, size: 50), @user %>
-			</div>
 			<div class="show_follow_profile_name">
 				<p><%= link_to @user.name, @user %></p>
 				<p><%= @following%></p>

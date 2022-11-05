@@ -19,13 +19,13 @@ gem 'turbolinks', '5.2.0'
 gem 'jbuilder',   '2.9.1'
 gem 'bootsnap',   '1.10.3', require: false
 gem 'faker'
-gem 'jquery-rails', '4.3.1'
 gem 'pry-rails'
 gem 'will_paginate',           '3.1.7'  
 gem 'bootstrap-will_paginate', '1.0.0' 
 gem 'kaminari'
 gem 'htmlbeautifier'
 gem 'carrierwave',             '1.2.2'  
+# gem 'jquery-rails', '4.3.1'
 
 
 group :production do
