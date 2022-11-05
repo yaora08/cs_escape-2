@@ -1,45 +1,50 @@
 <%= render 'layouts/header' %>
 <% provide(:title, @user.name) %>
-<div class="main">
-	<section class="user-show">
-		<div class="alert alert-success">
-			<% flash.each do |message_type, message| %>
-				<div class="alert alert-<%= message_type %>"><%= message %></div>
-			<% end %>
-		</div>
-		<div class="profile">
-			<div class="gravatar">
-				<div class="user-image"><%= gravatar_for @user %></div>
-			</div>
-			<div class="detail">
-				<div class="detail-name">
-					<h1 class="user-name"><%= @user.name %></h1>
-					<% if current_user?(@user) %>
-						<p class="user-edit"><%= link_to "プロフィールを編集", edit_user_path(@user) %></p>
-					<% else %>
-						<%= render 'follow_form' %>
-					<% end %>
+<section class="user-show">
+	<div class="alert alert-success">
+		<% flash.each do |message_type, message| %>
+			<div class="alert alert-<%= message_type %>"><%= message %></div>
+		<% end %>
+	</div>
+	<div class="container">
+		<div class="main">
+			<div class="profile">
+				<div class="profile-inner">
+					<div class="gravatar">
+						<div class="user-image"><%= gravatar_for @user %></div>
+					</div>
+					<div class="detail">
+						<div class="detail-name">
+							<h1 class="user-name"><%= @user.name %></h1>
+						</div>
+						<% if current_user?(@user) %>
+							<p class="user-edit"><%= link_to "プロフィールを編集", edit_user_path(@user) %></p>
+						<% else %>
+							<%= render 'follow_form' %>
+						<% end %>
+					</div>
 				</div>
 				<div class="detail-introduction">
-					<%= @user.introduction %>
-				</div>
-				<div class="stats">
-					<%= render 'shared/stats' %>
+						<%= @user.introduction %>
+					</div>
+					<div class="stats">
+						<%= render 'shared/stats' %>
+					</div>
+			</div>
+			<div class="show-micropost row">
+				<div class="col-md-9">
+					<div class="show-micropost-button">
+						<div class="show-micropost-button-user"><%= link_to '自分の投稿', user_path, local: false %></div>
+						<div class="show-micropost-button-favorite"><%= link_to 'いいねした投稿', favorites_user_path, local: false %></div>
+					</div>
+					<% if @user.microposts.any? %>
+						<ol class="microposts">
+							<%= render @microposts %>
+						</ol>
+						<%= will_paginate @microposts %>
+					<% end %>
 				</div>
 			</div>
 		</div>
-		<div class="show-micropost row">
-			<div class="col-md-9">
-				<div class="show-micropost-button">
-					<div class="show-micropost-button-user"><%= link_to '自分の投稿', user_path, local: false %></div>
-					<div class="show-micropost-button-favorite"><%= link_to 'いいねした投稿', favorites_user_path, local: false %></div>
-				</div>
-				<% if @user.microposts.any? %>
-					<ol class="microposts">
-						<%= render @microposts %>
-					</ol>
-					<%= will_paginate @microposts %>
-				<% end %>
-			</div>
-		</div>
-	</section>
+	</div>
+</section>

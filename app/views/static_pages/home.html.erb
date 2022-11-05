@@ -1,25 +1,28 @@
-<section class="static-page">
-	<div class="alert alert-success">
-		<% flash.each do |message_type, message| %>
-			<div class="alert alert-<%= message_type %>"><%= message %></div>
-		<% end %>
-	</div>
-	<% if logged_in? %>
-		<%= render 'layouts/header' %>
-		<div class="main">
+<% if logged_in? %>
+	<%= render 'layouts/header' %>
+	<section class="static-page">
+		<div class="alert alert-success">
+			<% flash.each do |message_type, message| %>
+				<div class="alert alert-<%= message_type %>"><%= message %></div>
+			<% end %>
+		</div>
+		<div class="container">
 				<div class="row">
 					<div class="col-md-9">
 						<%# <span><%= pluralize(current_user.microposts.count, "件の投稿") %>
-						<div class="show-micropost">
-							<div class="home-micropost">
-								<div class="show-micropost-button-user"><%= link_to 'フォロー中の投稿', root_path, local: false %></div>
+						<div class="home-micropost">
+							<div class="home-micropost-inner">
+							<div class="show-micropost-button">
+<div class="show-micropost-button-user"><%= link_to 'フォロー中の投稿', root_path, local: false %></div>
 								<div class="show-micropost-button-favorite"><%= link_to '全ての投稿', all_posts_path, local: false %></div>
 							</div>
-							<%= render 'shared/feed' %>
+								<%= render 'shared/feed' %>
+							</div>
+		
 						</div>
 					</div>
 				</div>
-			
+		
 		<% else %>
 			<div class="static-page_home">
 				<p class="second-title">公務員の次のステップへ</p>

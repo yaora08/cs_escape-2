@@ -4,22 +4,62 @@
 			<%= link_to "NEXT公務員", '#', id: "logo", class: "header-title" %>
 			<nav>
 				<ul class="nav navbar-nav navbar-right">
-					<li><%= link_to "ログアウト", logout_path, class: "logout", method: :delete %></li>
+					<li><%= link_to "投稿する", new_micropost_path, class: "header-bottom-list" %></li>
 				</ul>
 			</nav>
 		</div>
 	</div>
+	<div class="header-bottom-nav">
+		<div class="container">
+			<ul class="header-bottom-items">
+				<li class="header-bottom-item"><%= link_to "ホーム",root_path, class: "header-bottom-list"  '#' %></li>
+				<li class="header-bottom-item"><%= link_to "プロフィール", current_user, class: "header-bottom-list"  '#' %></li>
+				<li class="header-bottom-item"><%= link_to "ユーザー一覧", users_path, class: "header-bottom-list"  '#' %></li>
+				<li class="header-bottom-item"><%= link_to "チャット", class: "header-bottom-list"  '#' %></li>
+				<li class="header-bottom-item"><%= link_to "ログアウト", logout_path, class: "logout", method: :delete %></li>
+				
+			</ul>
+		</div>
+	</div>
 </header>
-<div class="container">
-	<div class="main-topic">
+<div class="drawer-icon">
+	<div class="drawer-icon_bars">
+		<div class="drawer-icon_bar1"></div>
+		<div class="drawer-icon_bar2"></div>
+		<div class="drawer-icon_bar3"></div>
+	</div>
+</div>
+<div class="drawer-content">
+	<div class="drawer-content_item"><a href ="#">ホーム</a></div>
+	<div class="drawer-content_item"><a href ="#">プロフィール</a></div>
+	<div class="drawer-content_item"><a href ="#">ユーザー一覧</a></div>
+	<div class="drawer-content_item"><a href ="#">チャット</a></div>
+	<div class="drawer-content_item"><a href ="#">投稿する</a></div>
+	<div class="drawer-content_item"><a href ="#">ログアウト</a></div>
+</div>
+<div class="drawer-background"></div>
+<%# <div class="main-side">
+
 		<div class="side">
 			<nav class="sidebar">
 				<ul claÏss="sidebar-items">
-					<li><%= link_to "ホーム",root_path, class: "side-list"  '#' %></li>
-					<li><%= link_to "プロフィール", current_user, class: "side-list"  '#' %></li>
-					<li><%= link_to "ユーザー一覧", users_path %></li>
-					<li><%= link_to "チャット", class: "side-list"  '#' %></li>
-					<li><%= link_to "投稿する", new_micropost_path, class: "side-list" %></li>
-				</ul>
-			</nav>
-		</div>
+					<><%= link_to "ホーム",root_path, class: "side-list"  '#' %>
+<%# <li><%= link_to "プロフィール", current_user, class: "side-list"  '#' %>
+<%# <><%= link_to "ユーザー一覧", users_path %>
+<%# <li><%= link_to "チャット", class: "side-list"  '#' %>
+<%# <li><%= link_to "投稿する", new_micropost_path, class: "side-list" %>
+<%# </ul> %>
+<%# </nav> %>
+<%# </div> %>
+<%# <div class="main-topic"> %>
+<script type="text/javascript">
+	$(function() {
+	$('.drawer-icon').on('click', function(e) {
+	e.preventDefault();
+	$('.drawer-icon').toggleClass('is-active');
+	$('.drawer-content').toggleClass('is-active');
+	$('.drawer-background').toggleClass('is-active');
+	return false;
+	});
+	});
+</script>
