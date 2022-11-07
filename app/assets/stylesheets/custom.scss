@@ -566,7 +566,7 @@ form {
   height: 70px;
   background-color: #000;
   position: fixed;
-  z-index: 999;
+  z-index: 998;
   top: 0;
   left: 0;
 }
@@ -1083,7 +1083,10 @@ span.image {
 
 /*----------microposts/new-----------*/
 
+
 .micropost_new {
+  margin: 0 auto;
+  width: 400px;
   .gravatar {
     width: 70px;
     height: 70px;
@@ -1102,12 +1105,10 @@ span.image {
 
   .field {
     margin-bottom: 10px;
-    width: 400px;
     margin: 0 auto;
   }
 
   input[type="file"] {
-    margin-left: 265px;
   }
 
   input[type="submit"] {
@@ -1281,6 +1282,7 @@ span.image {
   z-index: 300;
   display: none;
   transition: transform 0.5s ease 0s;
+  z-index: 999;
 
   @media only screen and (max-width: 768px) {
     display: block;
@@ -1343,7 +1345,7 @@ span.image {
   top: 0;
   background: white;
   box-shadow: 0 0 3px rgba(#000, 0.16);
-  z-index: 299;
+  z-index: 999;
   transform: translateX(105%);
   transition: transform 0.5s ease 0s;
   &.is-active {
@@ -1385,6 +1387,10 @@ span.image {
   display: none;
 }
 
+.header-bottom-nav {
+  display: none;
+}
+
 .main {
   width: 100%;
 }
@@ -1413,9 +1419,7 @@ span.image {
     
 
     .home-micropost-inner{
-      width: 750px;
-      margin-top: -35px;
-      margin-left: 40px;
+      width: 700px;
 
       .show-micropost-button-favorite {
         height: 70px;

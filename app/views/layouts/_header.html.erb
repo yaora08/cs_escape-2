@@ -30,12 +30,12 @@
 	</div>
 </div>
 <div class="drawer-content">
-	<div class="drawer-content_item"><a href ="#">ホーム</a></div>
-	<div class="drawer-content_item"><a href ="#">プロフィール</a></div>
-	<div class="drawer-content_item"><a href ="#">ユーザー一覧</a></div>
-	<div class="drawer-content_item"><a href ="#">チャット</a></div>
-	<div class="drawer-content_item"><a href ="#">投稿する</a></div>
-	<div class="drawer-content_item"><a href ="#">ログアウト</a></div>
+	<div class="drawer-content_item"><%= link_to "ホーム",root_path, class: "header-bottom-list" %></div>
+	<div class="drawer-content_item"><%= link_to "プロフィール", current_user, class: "header-bottom-list"%></div>
+	<div class="drawer-content_item"><%= link_to "ユーザー一覧", users_path, class: "header-bottom-list"  '#' %></div>
+	<div class="drawer-content_item"><%= link_to "チャット", class: "header-bottom-list"  '#' %></div>
+	<div class="drawer-content_item"><%= link_to "投稿する", new_micropost_path, class: "header-bottom-list" %></div>
+	<div class="drawer-content_item"><%= link_to "ログアウト", logout_path, class: "logout", method: :delete %></div>
 </div>
 <div class="drawer-background"></div>
 <%# <div class="main-side">

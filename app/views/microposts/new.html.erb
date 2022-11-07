@@ -1,17 +1,19 @@
 <% provide(:title, "NEXT公務員") %>
 <%= render 'layouts/header' %>
 <div class="container">
-	<section class="micropost_new">
-		<h1 class="section-title">新規投稿</h1>
-		<div class="container row">
-			<div class="col-md-4">
-				<section class="user_info">
-					<%= render 'shared/user_info' %>
-				</section>
-				<section class="micropost_form col-md-6 col-md-offset-3">
-					<%= render 'shared/micropost_form' %>
-				</section>
+	<div class="inner">
+		<section class="micropost_new">
+			<h1 class="section-title">新規投稿</h1>
+			<div class="container row">
+				<div class="col-md-4">
+					<section class="user_info">
+						<%= render 'shared/user_info' %>
+					</section>
+					<section class="micropost_form col-md-6 col-md-offset-3">
+						<%= render 'shared/micropost_form' %>
+					</section>
+				</div>
 			</div>
-		</div>
-	</section>
+		</section>
+	</div>
 </div>
