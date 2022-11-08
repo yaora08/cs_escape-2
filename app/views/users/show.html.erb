@@ -13,25 +13,25 @@
 					<div class="gravatar">
 						<div class="user-image"><%= gravatar_for @user %></div>
 					</div>
-					<div class="detail">
-						<div class="detail-name">
-							<h1 class="user-name"><%= @user.name %></h1>
-						</div>
-						<% if current_user?(@user) %>
-							<p class="user-edit"><%= link_to "プロフィールを編集", edit_user_path(@user) %></p>
-						<% else %>
-							<%= render 'follow_form' %>
-						<% end %>
+					<div class="detail-name">
+						<h1 class="user-name"><%= @user.name %></h1>
 					</div>
 				</div>
 				<div class="detail-introduction">
 					<%= @user.introduction %>
 				</div>
-				<div class="stats">
-					<%= render 'shared/stats' %>
+				<div class="detail">
+					<div class="stats">
+						<%= render 'shared/stats' %>
+					</div>
+					<% if current_user?(@user) %>
+						<p class="user-edit"><%= link_to "プロフィールを編集", edit_user_path(@user) %></p>
+					<% else %>
+						<%= render 'follow_form' %>
+					<% end %>
 				</div>
 			</div>
-			<div class="show-micropost row">
+			<div class="show-micropost">
 				<div class="col-md-9">
 					<div class="show-micropost-button">
 						<div class="show-micropost-button-user"><%= link_to '自分の投稿', user_path, local: false %></div>

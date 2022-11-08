@@ -703,13 +703,13 @@ form {
 }
 
 .gravatar {
-  width: 150px;
-  height: 150px;
+  width: 120px;
+  height: 120px;
 }
 
 .user-image {
-  width: 180px;
-  height: 180px;
+  width: 120px;
+  height: 120px;
   
 }
 
@@ -725,9 +725,10 @@ form {
 
 .detail {
   display: flex;
-  width: 560px;
+  width: 750px;
   height: 40px;
-  margin-left: 40px;
+  height: 28px;
+  line-height: 28px;
 }
 
 .detail-name {
@@ -741,23 +742,25 @@ form {
 .user-name {
   width: 280px;
   font-size: 24px;
+  margin-left: 30px;
 }
 
 .user-edit {
-  width: 195px;
-  height: 40px;
+  width: 120px;
+  height: 28px;
   background-color: #fff;
-  margin-top: 4px;
+  margin-bottom: 5px;
   border-radius: 30px;
   border: 1px solid #78787b;
   text-align: center;
-  line-height: 40px;
+  line-height: 28px;
   position: relative;
-  margin-right: 15px;
+  margin-left: auto;
 
   a {
    color: #78787b;
    position: absolute;
+   font-size: 11px;
    top:0;
    left:0;
    right: 0;
@@ -767,8 +770,8 @@ form {
 .detail-introduction {
   width: 500px;
   height: 100px;
-  margin-left: 190px;
-  margin-top: -100px;
+  margin-left: 150px;
+  margin-top: -80px;
 }
 
 #follow_form {
@@ -837,6 +840,33 @@ form {
   margin-left: auto;
 }
 
+@media only screen and (max-width: 768px) {
+.container {
+  font-size: 18px;
+}
+
+.profile {
+  width: 630px;
+  margin: 0 auto;
+}
+
+.stats {
+  a {
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+}
+
+  .show-micropost-button {
+    width: 630px;
+    margin: 0 auto;
+  }
+}
+
+
+
+
 // お気に入り
 .like-btn-unlike {
   color: red;
@@ -878,15 +908,15 @@ form {
   }
 }
 
-/*----------statsu-----------*/
+/*----------stats-----------*/
 .stats {
-  width: 750px;
+  width: 400px;
+  margin-left: 150px;
   a {
     color: #000;
     text-decoration: none;
-    margin-left: 80px;
-    &:first-child{
-      margin-left: 280px;
+    &:last-child {
+      margin-left: 15px;
     }
   }
 }
@@ -1392,13 +1422,9 @@ span.image {
   display: none;
 }
 
-.main {
-  width: 100%;
-}
-
 .container {
   margin: 0 auto;
-  width: 700px;
+  width: 630px;
 }
   /*--staticpage/home--*/
   .static-page {
@@ -1413,7 +1439,7 @@ span.image {
    }
 
    .home-micropost {
-    width: 750px;
+    width: 630px;
     height: 100vh;
     margin: 0 auto;
     margin-top: 130px;
@@ -1467,7 +1493,29 @@ span.image {
   }
 
 
+  /*----user/show---*/
+  .main {
+    width: 630px;
+    padding: 0 20px;
+  }
 
+  
+  .microposts {
+    margin: 0 auto;
+  }
+
+  .show-micropost {
+    width: 630px;
+  }
+
+  .detail {
+    display: block;
+  }
+
+  .user-edit {
+    margin-top: -80px;
+    margin-left: auto;
+  }
 
 
   /*--users/index--*/
