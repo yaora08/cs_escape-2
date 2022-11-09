@@ -364,7 +364,6 @@ a {
 }
 
 .container {
-    width: 90%;
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -476,11 +475,6 @@ form {
 
 /*----------users#new-------------*/
 .signup {
-  .container {
-    margin: 0 auto;
-    
-  }
-
   .login_message {
     width: 100%;
     margin-top: 30px;
@@ -757,6 +751,7 @@ form {
   position: relative;
   margin-left: auto;
 
+
   a {
    color: #78787b;
    position: absolute;
@@ -810,10 +805,6 @@ form {
   display: flex;
 }
 
-.show-micropost-button {
-  display: flex;
-}
-
 .show-micropost-button-user,
 .show-micropost-button-favorite {
   width: 475px;
@@ -839,32 +830,6 @@ form {
 .micropost_show_delete {
   margin-left: auto;
 }
-
-@media only screen and (max-width: 768px) {
-.container {
-  font-size: 18px;
-}
-
-.profile {
-  width: 630px;
-  margin: 0 auto;
-}
-
-.stats {
-  a {
-    &:first-child{
-      margin-left: 0;
-    }
-  }
-}
-
-  .show-micropost-button {
-    width: 630px;
-    margin: 0 auto;
-  }
-}
-
-
 
 
 // お気に入り
@@ -910,7 +875,7 @@ form {
 
 /*----------stats-----------*/
 .stats {
-  width: 400px;
+  width: 300px;
   margin-left: 150px;
   a {
     color: #000;
@@ -1107,10 +1072,6 @@ span.image {
   }
   
 }
-
-
-
-
 
 /*----------microposts/new-----------*/
 
@@ -1414,17 +1375,20 @@ span.image {
 　タブレット用css
 -------------------------*/
 @media only screen and (max-width: 768px) {
+  body {
+    font-size: 20px;
+  }
+
+  #logo {
+    margin-left: 45px;
+  }
+
 .navbar-right {
   display: none;
 }
 
 .header-bottom-nav {
   display: none;
-}
-
-.container {
-  margin: 0 auto;
-  width: 630px;
 }
   /*--staticpage/home--*/
   .static-page {
@@ -1439,21 +1403,10 @@ span.image {
    }
 
    .home-micropost {
-    width: 630px;
     height: 100vh;
     margin: 0 auto;
     margin-top: 130px;
    }
-    
-
-    .home-micropost-inner{
-      width: 700px;
-
-      .show-micropost-button-favorite {
-        height: 70px;
-      }
-
-    }
 
     .microposts {
       width: 90%;
@@ -1463,6 +1416,14 @@ span.image {
 
     .show-micropost{
       margin-left: none;
+    }
+
+    .show-micropost-button {
+      margin-bottom: 10px;
+    }
+
+    li {
+      padding: 20px 0;
     }
   }
 
@@ -1494,35 +1455,16 @@ span.image {
 
 
   /*----user/show---*/
-  .main {
-    width: 630px;
-    padding: 0 20px;
-  }
-
-  
-  .microposts {
-    margin: 0 auto;
+  .profile {
+    width: 700px;
   }
 
   .show-micropost {
-    width: 630px;
+    width: 700px;
   }
 
   .detail {
     display: block;
-  }
-
-  .user-edit {
-    margin-top: -80px;
-    margin-left: auto;
-  }
-
-
-  /*--users/index--*/
-  .user-index {
-    .main {
-      margin-left: 190px;
-    }
   }
   
 }

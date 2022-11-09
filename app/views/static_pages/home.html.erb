@@ -10,13 +10,13 @@
 			<div class="row">		
 					<%# <span><%= pluralize(current_user.microposts.count, "件の投稿") %>
 					<div class="home-micropost">
-						<div class="home-micropost-inner">
+						
 							<div class="show-micropost-button">
 								<div class="show-micropost-button-user"><%= link_to 'フォロー中の投稿', root_path, local: false %></div>
 								<div class="show-micropost-button-favorite"><%= link_to '全ての投稿', all_posts_path, local: false %></div>
 							</div>
 							<%= render 'shared/feed' %>
-						</div>
+			
 					</div>			
 			</div>
 		<% else %>

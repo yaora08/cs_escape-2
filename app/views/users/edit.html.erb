@@ -1,16 +1,15 @@
 <%= render 'layouts/header' %>
-<div class="main">
-	<section class="edit">
-		<h1 class="section-title">プロフィールを編集</h1>
-		<div class="container row">
-			<div class="edit-inner">
-<div class="gravatar_edit">
+<section class="edit">
+	<h1 class="section-title">プロフィールを編集</h1>
+	<div class="container row">
+		<div class="edit-inner">
+			<div class="gravatar_edit">
 				<%= gravatar_for @user %>
 				<a href="https://gravatar.com/emails" target="_blank">プロフィール画像を変更</a>
 			</div>
 			<div class="edit_form col-md-6 col-md-offset-3">
 				<%= form_with(model: @user, local: true) do |f| %>
-				<%= render 'shared/error_messages', object: f.object %>
+					<%= render 'shared/error_messages', object: f.object %>
 					<% f.label :name %>
 					<div class="text"><%= f.text_field :name, placeholder: "ユーザー名",  class: 'form-control text'%></div>
 					<div class="text"><%= f.email_field :email, placeholder: "メールアドレス", class: 'form-control text' %></div>
@@ -22,8 +21,6 @@
                                 data: { confirm: "本当にこのアカウントを削除してよろしいですか？" } %>
 				<% end %>
 			</div>
-			</div>
-			
 		</div>
-	</section>
-</div>
+	</div>
+</section>
