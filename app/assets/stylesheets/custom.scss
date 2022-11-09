@@ -1107,6 +1107,10 @@ span.image {
     -webkit-appearance: none;
     margin-top: 10px;
   }
+
+  .field {
+    height: 150px;
+  }
 }
 
 
@@ -1457,6 +1461,7 @@ span.image {
   /*----user/show---*/
   .profile {
     width: 700px;
+    margin: 0 auto;
   }
 
   .show-micropost {
