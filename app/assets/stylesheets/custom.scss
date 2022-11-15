@@ -352,6 +352,12 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
+    height: 100%;
+    max-width: 1200px;
+}
+
+.wrap {
+  overflow: hidden;
 }
 
 a {
@@ -365,7 +371,12 @@ a {
 
 .container {
     max-width: 1200px;
+    width: 95%;
     margin: 0 auto;
+}
+
+.main {
+  max-width: 100%;
 }
 
 li {
@@ -390,16 +401,7 @@ form {
   margin-left: 15px;
 }
 
-.main {
-  width: 750px;
-  margin: 0 auto;
-  margin-top: 130px;
-    form {
-      @import "bootstrap-sprockets";
-      @import "bootstrap";
-      margin: 0 auto;
-    }
-}
+
 
 
 /* static_page#home*/
@@ -637,8 +639,14 @@ form {
   margin-top: 100px;
 }
 
+.profile {
+  margin-top: 130px;
+}
+
 .profile-inner {
   display: flex;
+  width: 750px;
+  margin: 0 auto;
 }
 
 .gravatar {
@@ -664,10 +672,11 @@ form {
 
 .detail {
   display: flex;
-  width: 750px;
+  width: 700px;
   height: 40px;
   height: 28px;
   line-height: 28px;
+  margin: 0 auto;
   margin-top: -40px;
 }
 
@@ -1025,9 +1034,7 @@ span.image {
 .micropost_new {
    margin: 0 auto;
 
-  .main {
-    width: 810px;
-  }
+ 
 
   .gravatar {
     width: 70px;
@@ -1345,9 +1352,7 @@ span.image {
     font-size: 20px;
   }
 
-  .main {
-    width: 810px;
-  }
+ 
 
   #logo {
     margin-left: 45px;
@@ -1443,6 +1448,7 @@ span.image {
   }
 }
 
+/*-----micropost/new------*/
 
 
 /*----------------------
@@ -1453,15 +1459,6 @@ span.image {
     font-size: 32px;
     width: 100%;
   }
-
-  .container {
-    width: 100%;
-  }
-
-  .main {
-    margin-top: 150px;
-  }
-
   /*-----------header--------------*/
   .navbar {
     height: 120px;
@@ -1554,7 +1551,8 @@ span.image {
   /*------micropost/new------*/
 
   .micropost_form {
-    width: 80%;
+    width: 50%;
+    margin: 0 auto;
   }
 
 }
