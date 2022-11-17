@@ -352,8 +352,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     line-height: 1.5;
-    height: 100%;
-    max-width: 1200px;
 }
 
 .wrap {
@@ -398,7 +396,9 @@ form {
 .pagination {
   @import "bootstrap-sprockets";
   @import "bootstrap";
-  margin-left: 15px;
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 130px;
 }
 
 
@@ -747,7 +747,7 @@ form {
 
 .show-micropost {
   width: 750px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   margin-top: 35px;
 }
@@ -902,8 +902,9 @@ form {
   @import "bootstrap-sprockets";
   @import "bootstrap";
   list-style: none;
-  width: 720px;
+  width: 750px;
   margin-top: 20px;
+  margin: 0 auto;
   li {
     overflow: auto;
     padding: 10px 0;
@@ -1033,6 +1034,8 @@ span.image {
 
 .micropost_new {
    margin: 0 auto;
+   margin-top: 140px;
+   width: 750px;
 
  
 
@@ -1051,7 +1054,7 @@ span.image {
   }
 
   input[type="file"] {
-    margin-top: 30px;
+    margin-top: -10px;
   }
 
   input[type="submit"] {
@@ -1066,6 +1069,7 @@ span.image {
 .micropost_form {
   width: 65%;
   margin: 0 auto;
+  margin-top: -20px;
   .field {
     textarea[id="micropost_content"] {
       height: 130px;
@@ -1242,7 +1246,7 @@ span.image {
 /*--drawer--*/
 .drawer-icon {
   position: fixed;
-  top: 35px;
+  top: 28px;
   right: 50px;
   z-index: 300;
   display: none;
@@ -1258,7 +1262,7 @@ span.image {
 
     .drawer-icon_bar1 {
       transform: rotate(-45deg);
-      top: 13px;
+      top: 12px;
     }
     
     .drawer-icon_bar2 {
@@ -1267,13 +1271,13 @@ span.image {
     
     .drawer-icon_bar3 {
       transform: rotate(45deg);
-      top: 13px;
+      top: 12px;
     }
   }
 }
 
 .drawer-icon_bars {
-  width: 40px;
+  width: 35px;
   height: 38px;
   display: block;
   position: relative;
@@ -1283,8 +1287,8 @@ span.image {
 .drawer-icon_bar2,
 .drawer-icon_bar3 {
   position: absolute;
-  width: 40px;
-  height: 6px;
+  width: 35px;
+  height: 5px;
   background: white;
   top: 0;
   left: 0;
@@ -1295,11 +1299,11 @@ span.image {
 }
 
 .drawer-icon_bar2 {
-  top: 14px;
+  top: 12px;
 }
 
 .drawer-icon_bar3 {
-  top: 28px;
+  top: 24px;
 }
 
 .drawer-content {
@@ -1352,10 +1356,15 @@ span.image {
     font-size: 20px;
   }
 
+  .inner {
+    width: 90%;
+    margin: 0 auto;
+  }
+
  
 
   #logo {
-    margin-left: 45px;
+    margin-left: 35px;
   }
 
   .navbar-right {
@@ -1374,14 +1383,12 @@ span.image {
 
    .home-micropost {
     height: 100vh;
-    margin: 0 auto;
-    margin-top: 130px;
+    margin-top: 105px;
+    width: 100%;
    }
 
     .microposts {
-      width: 90%;
-      margin-left: 40px;
-
+   
     }
 
     .show-micropost{
@@ -1389,8 +1396,7 @@ span.image {
     }
 
     .show-micropost-button {
-      margin-bottom: 10px;
-      padding: 10px 0;
+ 
     }
 
     li {
@@ -1403,16 +1409,15 @@ span.image {
 
   /*--header--*/
   .navbar {
-    height: 100px;
+    height: 80px;
   }
 
   .header_nav {
-    line-height: 100px;
+    line-height: 80px;
   }
 
   .header_nav {
     .header-title {
-      margin-left: 20px;
     }
 
     .logout {
@@ -1427,20 +1432,35 @@ span.image {
 
   /*----user/show---*/
   .profile {
-    width: 700px;
-    margin: 0 auto;
+    width: 100%;
+    margin-top: 110px;
   }
 
   .show-micropost {
-    width: 700px;
+    width: 100%;
   }
 
   .detail {
-    display: flex;
+    width: 100%;
+    display: block;
+    margin-top: -65px;
   }
   
   .user-edit {
-    margin-left: 60px;
+    border-radius: none;
+    border: none;
+    width: 200px;
+    height: 30px;
+    margin: 5px 0 0 139px;
+    a {
+      font-size: 20px;
+      color: #a6a6a7;
+    }
+  }
+
+  .detail-introduction {
+    margin-top: 50px;
+    width: 100%;
   }
 
   #follow_form {
@@ -1459,6 +1479,7 @@ span.image {
     font-size: 32px;
     width: 100%;
   }
+
   /*-----------header--------------*/
   .navbar {
     height: 120px;
