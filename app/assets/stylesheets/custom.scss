@@ -469,7 +469,7 @@ form {
 
 .home-micropost {
   width: 750px;
-  height: 100vh;
+  height: 100%;
   margin: 0 auto;
   margin-top: 130px;
 }
@@ -1358,6 +1358,11 @@ span.image {
     font-size: 20px;
   }
 
+  .alert, 
+  .alert-success {
+    margin-top: 80px;
+  }
+
   .inner {
     width: 90%;
     margin: 0 auto;
@@ -1384,8 +1389,8 @@ span.image {
    }
 
    .home-micropost {
-    height: 100vh;
-    margin-top: 105px;
+    height: 100%;
+    margin-top: 95px;
     width: 100%;
    }
 
@@ -1435,7 +1440,20 @@ span.image {
   /*----user/show---*/
   .profile {
     width: 100%;
-    margin-top: 110px;
+    margin-top: 100px;
+  }
+
+  .profile-inner {
+    width: 100%;
+    img {
+      width: 80px;
+      height: 80px;
+    }
+  }
+
+  .user-image {
+    width: 60px;
+    height: 60px;
   }
 
   .show-micropost {
@@ -1446,6 +1464,15 @@ span.image {
     width: 100%;
     display: block;
     margin-top: -65px;
+  }
+
+  .detail-name {
+    width: 100%;
+  }
+
+  .stats {
+    width: 100%;
+    margin-left: 90px;
   }
   
   .user-edit {
@@ -1486,6 +1513,7 @@ span.image {
 @media only screen and (max-width: 500px) {
   body {
     width: 100%;
+    font-size: 16px;
   }
 
   /*-----------header--------------*/
@@ -1525,47 +1553,59 @@ span.image {
   height: 4px;
   }
 
-  .drawer-content_item {
-    height: 90px;
-    font-size: 30px;
-    a {
-      padding: 23px 20px;
-    }
+  .drawer-content {
+    width: 160px;
   }
+
+  .drawer-content_item {
+    font-size: 16px;
+  }
+
+  .drawer-icon {
+    &.is-active {
+      transform: translateX(-140px);
+
+      .drawer-icon_bar1 {
+        top: -8px;
+        width: 20px;
+        height: 2px;
+      }
+
+      .drawer-icon_bar3 {
+        top: -8px;
+        width: 20px;
+        height: 2px;
+      }
+      }
+  }
+
   /*---------home---------*/
   .micropost-comment {
     img {
-      width: 32px;
-      height: 32px;
+      width: 20px;
+      height: 20px;
     }
   }
 
 
   /*------user/show---------*/
+
+
   .user-name {
-    font-size: 34px;
+    font-size: 20px;
   }
 
   .detail {
     display: block;
   }
 
-  .stats {
-    margin: 0;
-    margin-left: 150px;
-    width: 500px;
-  }
-
   .user-edit {
     display: block;
-    margin: 0;
-    width: 300px;
-    height: 50px;
-    line-height: 50px;
-    padding: 10px;
-    margin-top: 35px;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 20px;
     a {
-      font-size: 30px;
+      font-size: 18px;
     }
   }
 
@@ -1582,20 +1622,13 @@ span.image {
 
 
   .detail-introduction {
-    margin-top: 100px;
+    margin-top: 75px;
     width: 100%;
   }
 
   .show-micropost {
     margin-top: 35px;
   }
-
-
-  .show-micropost-button {
-    margin: 10px 0;
-    padding: 7px 0;
-  }
-
 
   /*------micropost/new------*/
 
