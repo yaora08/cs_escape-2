@@ -396,7 +396,6 @@ form {
 .pagination {
   @import "bootstrap-sprockets";
   @import "bootstrap";
-  width: 750px;
   margin: 0 auto;
   margin-top: 130px;
 }
@@ -689,7 +688,7 @@ form {
 
 
 .user-name {
-  width: 280px;
+  width: 100%;
   font-size: 24px;
   margin-left: 30px;
 }
@@ -863,12 +862,16 @@ form {
 
 .checkbox {
   display: flex;
-  height: 35px;
-  line-height: 35px;
-  width: 215px;
+  height: 25px;
+  line-height: 27px;
+  width: 240px;
   margin: 0 auto;
   span {
     margin-left: 15px;
+  }
+  #session_remember_me {
+    width: 20px;
+    height: 20px;
   }
 }
 
@@ -1034,7 +1037,6 @@ span.image {
 
 
 .micropost_new {
-   margin: 0 auto;
    margin-top: 140px;
    width: 100%;
 
@@ -1394,10 +1396,6 @@ span.image {
     width: 100%;
    }
 
-    .microposts {
-   
-    }
-
     .show-micropost{
       margin-left: none;
     }
@@ -1456,6 +1454,10 @@ span.image {
     height: 60px;
   }
 
+  .user-name {
+    margin-left: 0;
+  }
+
   .show-micropost {
     width: 100%;
   }
@@ -1497,6 +1499,11 @@ span.image {
   }
 }
 
+/*-----users-----*/
+  .pagination {
+    margin-top: 100px;
+  }
+
 
 /*----micropost/show----*/
 
@@ -1504,7 +1511,20 @@ span.image {
   width: 100%;
 }
 
+.microposts {
+  .content {
+    margin-left: 70px;
+  }
+}
 /*-----micropost/new------*/
+.user_info {
+  display: flex;
+  margin-left: 30px;
+  .gravatar {
+    width: 50px;
+    height: 50px;
+  }
+}
 
 
 /*----------------------
@@ -1587,12 +1607,27 @@ span.image {
     }
   }
 
+  .text {
+    width: 100%;
+  }
+
 
   /*------user/show---------*/
 
 
   .user-name {
     font-size: 20px;
+  }
+
+  .profile-inner {
+    img {
+      width: 50px;
+      height: 50px;
+    }
+  }
+
+  .stats {
+    margin-left: 50px;
   }
 
   .detail {
@@ -1611,13 +1646,8 @@ span.image {
 
   #follow_form {
     margin-left: 0;
-    margin-top: 35px;
     height: 50px;
     line-height: 50px;
-    input {
-      width: 220px;
-      font-size: 30px;
-    }
   }
 
 
@@ -1633,8 +1663,19 @@ span.image {
   /*------micropost/new------*/
 
   .micropost_form {
-    width: 50%;
+    width: 85%;
     margin: 0 auto;
+    margin-top: -40px;
   }
 
+  .user_info {
+    margin-left: 15px;
+   h1 {
+    margin-left: 20px;
+   }
+
+    a {
+      margin: 0;
+    }
+  }
 }
