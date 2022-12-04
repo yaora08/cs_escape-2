@@ -1,4 +1,5 @@
 Rails.application.routes.draw do 
+  get 'chats/show'
   get 'comments/create'
   get 'comments/destroy'
   get 'password_resets/new'
@@ -19,6 +20,8 @@ Rails.application.routes.draw do
       get :all_posts
     end
   end
+  get 'chat/:id', to: 'chats#show', as: 'chat'
+  resources :chats, only: [:create]
 
 
   resources :users do

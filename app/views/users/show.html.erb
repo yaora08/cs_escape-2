@@ -27,6 +27,11 @@
 						<%= render 'follow_form' %>
 					<% end %>
 				</div>
+				<div class="chat">
+					<% if current_user != @user %>
+						<%= link_to 'Begin Chat', chat_path(@user.id) %>
+					<% end %>
+				</div>
 				<div class="detail-introduction">
 					<%= @user.introduction %>
 				</div>
