@@ -23,6 +23,8 @@ class User < ApplicationRecord
     validates :password, presence: true, length: { minimum: 6 }, allow_nil: true
     has_many :followers, through: :passive_relationships, source: :follower
     has_many :favorites, dependent: :destroy
+    has_many :user_rooms, dependent: :destroy
+    has_many :chats, dependent: :destroy
     
 
 
