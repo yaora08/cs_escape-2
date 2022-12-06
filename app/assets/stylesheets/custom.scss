@@ -745,8 +745,10 @@ form {
 }
 
 .chat {
-  width: 20px;
-  height: 20px;
+  img {
+    width: 30px;
+    height: 30px;
+  }
 }
 
 .show-micropost {
