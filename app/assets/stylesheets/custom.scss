@@ -1228,14 +1228,22 @@ span.image {
 /*---chat/show---*/
 .user-chat {
   margin-top: 100px;
-  tbody {
-    
+  height: 100%;
+}
+
+tbody {
+  .message-me {
+    position: relative;
+    background: #EFEFEF;
+    width: fit-content;
+    padding: 20px;
+    border-radius: 10px;
+    margin-left: 30px;
   }
 }
 
 .message {
   margin-top: 200px;
-  border: 1px solid #76a0a8;
 }
 
 
