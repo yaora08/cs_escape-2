@@ -21,12 +21,13 @@ Rails.application.routes.draw do
     end
   end
   get 'chat/:id', to: 'chats#show', as: 'chat'
-  resources :chats, only: [:create]
+  
 
 
   resources :users do
     member do
       get :following, :followers, :favorites
+      resources :chats, only: [:create, :show]
     end
   end
   resources :account_activations, only: [:edit]
