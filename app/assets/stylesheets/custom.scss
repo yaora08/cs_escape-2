@@ -1229,6 +1229,19 @@ span.image {
 .user-chat {
   margin-top: 100px;
   height: 100%;
+  width: 600px;
+  margin: auto;
+
+  tbody {
+    display: block;
+    tr {
+      padding: 5px 5px;
+      background: #b7b7ba;
+      width: auto;
+      display: inline-block;
+      border-radius: 10px;
+    }
+  }
 }
 
 // tbody {
