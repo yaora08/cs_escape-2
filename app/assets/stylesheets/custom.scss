@@ -1228,32 +1228,29 @@ span.image {
 /*---chat/show---*/
 .user-chat {
   margin-top: 100px;
+  padding-bottom: 150px;
   height: 100%;
   width: 600px;
   margin: auto;
 
   tbody {
     display: block;
-    tr {
-      padding: 5px 5px;
+    margin-bottom: 10px;
+    p {
+      padding: 5px 12px;
       background: #b7b7ba;
       width: auto;
+      max-width: 200px;
       display: inline-block;
       border-radius: 10px;
+    }
+    .timestamp {
+      display: block;
+      font-size: .75em;
     }
   }
 }
 
-// tbody {
-//   .message-me {
-//     position: relative;
-//     background: #EFEFEF;
-//     width: fit-content;
-//     padding: 20px;
-//     border-radius: 10px;
-//     margin-left: 30px;
-//   }
-// }
 
 .message {
   margin-top: 200px;
@@ -1280,6 +1277,8 @@ span.image {
     bottom: 0;
     padding: 10px 0;
     text-align: center;
+    z-index: 2;
+    background: #fff;
 
 
     textarea {
