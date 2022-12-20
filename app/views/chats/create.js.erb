@@ -1,2 +1,12 @@
 $('.message').append("<p style='text-align: left;'><%= @chat.message %></p>");
 $('textarea').val("")
+<%# $(function(){
+$('.user-chat').animate({ scrollTop: 100 });
+}); %>
+
+$(function(){
+const $scrollAuto = $('.user-chat');
+
+$scrollAuto.animate({scrollTop: ($scrollAuto[0].scrollHeight + 1000)}, 'fast')
+
+})

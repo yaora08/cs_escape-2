@@ -9,15 +9,15 @@
 						<tbody>
 							<tr>
 								<th>
-									<p class="message-me" style="text-align: left;"><%= chat.message %></p>
+									<p class="message-me" style="text-align: left;"><%= chat.message %></p>	
+									<%# <span class="timestamp"><%= chat.created_at</span> %> 
 								</th>
-								<th></th>
+								
 							</tr>
 						<% else %>
 							<tr>
-								<th></th>
 								<th>
-									<p style="text-align: right;"><%= chat.message %></p>
+									<p style="text-align: right;"><%= chats.message %></p>
 								</th>
 							</tr>
 						</tbody>
@@ -38,3 +38,11 @@
 		<%= f.submit "送信", class:"btn btn-sm btn-success chat-btn" %>
 	<% end %>
 </div>
+<script type="text/javascript">
+$(document).ready( function(){
+const $scrollAuto = $('html,body');
+
+$scrollAuto.animate({scrollTop: ($scrollAuto[0].scrollHeight + 1000)}, .001)
+});
+
+</script>
